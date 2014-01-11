@@ -1,0 +1,35 @@
+{
+  "name":"stringify",
+  "ns":"json",
+  "title": "JSON Stringify",
+  "description":"Stringify a javascript object",
+  "expose": ["JSON"],
+  "phrases": {
+    "active": "JSON Stringifying Object"
+  },
+  "ports":{
+    "input":{
+      "in":{
+        "type":"object",
+        "title":"Input Object",
+        "required": true
+      },
+      "replacer":{
+        "type":"any",
+        "title":"Replacer",
+        "description":"A function that alters the behavior of the stringification process, or an array of String and Number objects that serve as a whitelist for selecting the properties of the value object to be included in the JSON string. If this value is null or not provided, all properties of the object are included in the resulting JSON string.",
+      },
+      "space":{
+        "type":"number",
+        "title":"Indentation length",
+        "default": 0 
+      }
+    },
+    "output":{
+      "json": {
+        "type":"string",
+        "title":"The JSON string"
+      }
+    }
+  }
+}

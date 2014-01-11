@@ -1,0 +1,29 @@
+{
+  "name":"parse",
+  "ns":"json",
+  "title": "JSON Parse",
+  "description":"Parses a string into a javascript object",
+  "expose": ["JSON"],
+  "phrases": {
+    "active": "Parsing JSON string"
+  },
+  "ports":{
+    "input":{
+      "in":{
+        "type":"string",
+        "title":"JSON String",
+        "required": true
+      },
+      "reviver":{
+        "type":"function",
+        "title":"prescribes how the value originally produced by parsing is transformed, before being returned"
+      }
+    },
+    "output":{
+      "out": {
+        "type":"object",
+        "title":"The Javascript Object"
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "nodule-utils",
+  "description": "Utility components for Chiχ",
+  "author": "Rob Halff <rob.halff@gmail.com>",
+  "version": "0.0.3",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nodule/utils.git"
+  },
+  "dependencies": {
+    "inquiry": "0.x.x",
+    "JSONPath": "0.x.x",
+    "glob": "3.x.x",
+    "xml2json": "0.x.x",
+    "csv": "0.x.x",
+    "json-path": "0.x.x",
+    "xml2js": "0.x.x"
+  },
+  "devDependencies": {
+    "chit": "0.x.x"
+  },
+  "engines": {
+    "node": ">=0.6.0"
+  },
+  "main": "x",
+  "scripts": {
+    "test": "chit"
+  },
+  "chix": {
+    "name": "utils",
+    "color": "rgb(230,238,30)"
+  }
+}

@@ -17,220 +17,36 @@
   },
   "nodes": [
     {
-      "name": "log",
-      "ns": "console",
-      "description": "Console log",
-      "phrases": {
-        "active": "Logging to console"
-      },
-      "ports": {
-        "input": {
-          "msg": {
-            "type": "any",
-            "title": "Log message",
-            "description": "Logs a message to the console"
-          }
-        },
-        "output": {}
-      },
-      "fn": "console.log(input.msg)"
-    },
-    {
-      "name": "cvs",
-      "ns": "utils",
-      "title": "CVS",
-      "description": "NodeCSV Parser",
-      "require": {
-        "csv": "0.x.x"
-      },
-      "phrases": {
-        "active": "Parsing CSV"
-      },
-      "ports": {
-        "input": {
-          "csv": {
-            "type": "string",
-            "title": "CSV",
-            "description": "A Comma Seperated Values document",
-            "required": true
-          }
-        },
-        "output": {
-          "data": {
-            "type": "array",
-            "title": "Output",
-            "description": "An array of records"
-          }
-        }
-      },
-      "fn": "var un = {\n  chain: function(csv, cb) {\n    csv().\n    from.\n    string(input.csv, {} ).\n    to.\n    array(cb);\n  }\n};\n\noutput = [un, 'chain', input.csv];\n"
-    },
-    {
-      "name": "glob",
-      "ns": "fs",
-      "title": "Glob",
-      "description": "Match files using the patterns the shell uses, like stars and stuff.",
-      "require": {
-        "glob": "3.x.x"
-      },
-      "phrases": {
-        "active": "Globbing with pattern: {{input.pattern}}"
-      },
-      "ports": {
-        "input": {
-          "match": {
-            "type": "string",
-            "title": "Pattern",
-            "description": "Pattern to be matched",
-            "required": true
-          }
-        },
-        "output": {
-          "error": {
-            "type": "event",
-            "title": "Error",
-            "description": "Emitted when an unexpected error is encountered, or whenever any fs error occurs if `options.strict` is set."
-          },
-          "matches": {
-            "type": "array",
-            "title": "Matches",
-            "description": "Filenames found matching the pattern"
-          },
-          "end": {
-            "type": "event",
-            "title": "End",
-            "description": "When the matching is finished, this is emitted with all the matches found. If the `nonull` option is set, and no match was found, then the `matches` list contains the original pattern. The matches are sorted, unless the `nosort` flag is set."
-          },
-          "match": {
-            "type": "event",
-            "title": "Match",
-            "description": "Every time a match is found, this is emitted with the matched."
-          },
-          "abort": {
-            "type": "event",
-            "title": "Abort",
-            "description": "When `abort()` is called, this event is raised."
-          }
-        }
-      },
-      "fn": "output = function(cb) {\n\n  var mg = new glob.Glob(input.match, {}, function(err, matches) {\n\n    cb({\n      matches: matches\n    });\n\n    done();\n  \n  });\n\n  mg.on('match', function(match) {\n\n    cb({\n      match: match\n    });\n\n  });\n\n  mg.on('error', function(err) {\n\n    cb({\n      error: err \n    });\n\n  });\n\n  mg.on('abort', function() {\n\n    cb({\n      abort: null \n    });\n\n  });\n\n}\n"
-    },
-    {
-      "name": "hello",
-      "ns": "world",
-      "description": "Hello World!",
-      "phrases": {
-        "active": "Hello World from phrases.active!"
-      },
-      "ports": {
-        "input": {},
-        "output": {
-          "hello": {
-            "type": "string",
-            "title": "Hello World",
-            "description": "Provides Hello to the world",
-            "readonly": true
-          }
-        }
-      },
-      "fn": "output = { hello: 'Hello World!' }\n"
-    },
-    {
-      "name": "interval",
-      "ns": "util",
-      "description": "Repeats the input",
-      "phrases": {
-        "active": "Repeating input every {{input.interval}} milliseconds."
-      },
+      "name": "parse",
+      "ns": "json",
+      "title": "JSON Parse",
+      "description": "Parses a string into a javascript object",
       "expose": [
-        "setInterval"
+        "JSON"
       ],
+      "phrases": {
+        "active": "Parsing JSON string"
+      },
       "ports": {
         "input": {
           "in": {
-            "type": "any",
-            "title": "Input",
-            "description": "Input to be repeated",
-            "readonly": true
+            "type": "string",
+            "title": "JSON String",
+            "required": true
           },
-          "interval": {
-            "type": "number",
-            "title": "Interval",
-            "description": "Interval in milliseconds",
-            "format": "time"
+          "reviver": {
+            "type": "function",
+            "title": "prescribes how the value originally produced by parsing is transformed, before being returned"
           }
         },
         "output": {
           "out": {
-            "type": "any",
-            "title": "Output",
-            "description": "Outputs the repeated input"
+            "type": "object",
+            "title": "The Javascript Object"
           }
         }
       },
-      "fn": "var inter = {\n  val: function(to, cb) {\n   setInterval(function () { cb(input.in); }, to)\n  }\n}\noutput = [inter, 'val', input.interval]\n"
-    },
-    {
-      "name": "merge",
-      "ns": "object",
-      "description": "Merges two object together, note: overlapping keys will overwrite",
-      "phrases": {
-        "active": "Merging objects together"
-      },
-      "ports": {
-        "input": {
-          "object1": {
-            "type": "object",
-            "title": "First Object"
-          },
-          "object2": {
-            "type": "object",
-            "title": "Second Object"
-          }
-        },
-        "output": {
-          "object": {
-            "type": "object",
-            "title": "Merged Object"
-          }
-        }
-      },
-      "fn": "var obj = {}\n\nobj[input.name1] = input.value1\nobj[input.name2] = input.value2\n\noutput = { object: obj }\n"
-    },
-    {
-      "name": "mold",
-      "ns": "object",
-      "description": "Mold an object from two different inputs and name them",
-      "phrases": {
-        "active": "Molding object from {{input.name1}} & {{input.name2}}"
-      },
-      "ports": {
-        "input": {
-          "name1": {
-            "type": "string",
-            "title": "First value's name"
-          },
-          "value1": {
-            "type": "any",
-            "title": "First value"
-          },
-          "name2": {
-            "type": "string",
-            "title": "Second value's name"
-          },
-          "value2": {
-            "type": "any",
-            "title": "Second value"
-          }
-        },
-        "output": {
-          "object": {
-            "type": "object",
-            "title": "Object"
-          }
-        }
-      },
-      "fn": "var obj = {}\n\nobj[input.name1] = input.value1\nobj[input.name2] = input.value2\n\noutput = { object: obj }\n"
+      "fn": "output.out = JSON.parse(input.in, input.reviver);\n"
     },
     {
       "name": "path",
@@ -269,167 +85,42 @@
       "fn": "output = { matches: json_path.resolve(input.json, input.path) }\n"
     },
     {
-      "name": "wait",
-      "ns": "util",
-      "description": "Holds the input for a while",
-      "phrases": {
-        "active": "Holding input for {{input.timeout}} milliseconds."
-      },
+      "name": "stringify",
+      "ns": "json",
+      "title": "JSON Stringify",
+      "description": "Stringify a javascript object",
       "expose": [
-        "setTimeout"
+        "JSON"
       ],
-      "ports": {
-        "input": {
-          "in": {
-            "type": "any",
-            "title": "Input",
-            "description": "Input to be delayed",
-            "readonly": true
-          },
-          "timeout": {
-            "type": "number",
-            "title": "Timeout",
-            "description": "Timeout in milliseconds",
-            "format": "time"
-          }
-        },
-        "output": {
-          "out": {
-            "type": "any",
-            "title": "Output",
-            "description": "Outputs the delayed input"
-          }
-        }
-      },
-      "fn": "var cmd = child_process.spawn('ls', ['-lh', '/usr']);\n\nls.stdout.on('data', function (data) {\n  console.log('stdout: ' + data);\n});\n\nls.stderr.on('data', function (data) {\n  console.log('stderr: ' + data);\n});\n\nls.on('close', function (code) {\n  console.log('child process exited with code ' + code);\n});\n\n\noutput = [slow, 'down', input.timeout]\n"
-    },
-    {
-      "name": "true",
-      "title": "true?",
-      "ns": "conditional",
-      "description": "Whether the input is true or false",
       "phrases": {
-        "active": "Determining truth"
+        "active": "JSON Stringifying Object"
       },
       "ports": {
         "input": {
           "in": {
-            "type": "boolean",
-            "title": "A boolean"
-          }
-        },
-        "output": {
-          "yes": {
-            "type": "boolean",
-            "title": "Yes"
-          },
-          "no": {
-            "type": "boolean",
-            "title": "No"
-          }
-        }
-      },
-      "fn": "output = { yes: !!input.in, no: !input.in }\n"
-    },
-    {
-      "name": "wait",
-      "ns": "util",
-      "description": "Holds the input for a while",
-      "phrases": {
-        "active": "Holding input for {{input.timeout}} milliseconds."
-      },
-      "expose": [
-        "setTimeout"
-      ],
-      "ports": {
-        "input": {
-          "in": {
-            "type": "any",
-            "title": "Input",
-            "description": "Input to be delayed",
-            "readonly": true
-          },
-          "timeout": {
-            "type": "number",
-            "title": "Timeout",
-            "description": "Timeout in milliseconds",
-            "format": "time"
-          }
-        },
-        "output": {
-          "out": {
-            "type": "any",
-            "title": "Output",
-            "description": "Outputs the delayed input"
-          }
-        }
-      },
-      "fn": "var slow = {\n  down: function(to, cb) {\n   setTimeout(function () { cb(input.in); }, to)\n  }\n}\noutput = [slow, 'down', input.timeout]\n"
-    },
-    {
-      "name": "wait",
-      "ns": "util",
-      "description": "Holds the input for a while",
-      "phrases": {
-        "active": "Holding input for {{input.timeout}} milliseconds."
-      },
-      "expose": [
-        "setTimeout"
-      ],
-      "ports": {
-        "input": {
-          "in": {
-            "type": "any",
-            "title": "Input",
-            "description": "Input to be delayed",
-            "readonly": true
-          },
-          "timeout": {
-            "type": "number",
-            "title": "Timeout",
-            "description": "Timeout in milliseconds",
-            "format": "time"
-          }
-        },
-        "output": {
-          "out": {
-            "type": "any",
-            "title": "Output",
-            "description": "Outputs the delayed input"
-          }
-        }
-      },
-      "fn": "var slow = {\n  down: function(to, cb) {\n   setTimeout(function () { cb(input.in); }, to)\n  }\n}\noutput = [slow, 'down', input.timeout]\n"
-    },
-    {
-      "name": "xml2js",
-      "ns": "utils",
-      "description": "Simple XML to JavaScript object converter",
-      "require": {
-        "xml2js": "0.x.x"
-      },
-      "phrases": {
-        "active": "Converting XML to Object"
-      },
-      "ports": {
-        "input": {
-          "xml": {
-            "type": "string",
-            "format": "xml",
-            "title": "XML"
-          }
-        },
-        "output": {
-          "err": {
             "type": "object",
-            "title": "Error Object"
+            "title": "Input Object",
+            "required": true
           },
-          "result": {
-            "type": "object"
+          "replacer": {
+            "type": "any",
+            "title": "Replacer",
+            "description": "A function that alters the behavior of the stringification process, or an array of String and Number objects that serve as a whitelist for selecting the properties of the value object to be included in the JSON string. If this value is null or not provided, all properties of the object are included in the resulting JSON string."
+          },
+          "space": {
+            "type": "number",
+            "title": "Indentation length",
+            "default": 0
+          }
+        },
+        "output": {
+          "json": {
+            "type": "string",
+            "title": "The JSON string"
           }
         }
       },
-      "fn": "output = [xml2js, 'parseString', input.xml]\n"
+      "fn": "output.out = JSON.stringify(input.in, input.replacer, input.space);\n"
     }
   ],
   "twigs": []

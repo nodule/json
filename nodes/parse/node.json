@@ -16,7 +16,8 @@
       },
       "reviver":{
         "type":"function",
-        "title":"prescribes how the value originally produced by parsing is transformed, before being returned"
+        "title":"prescribes how the value originally produced by parsing is transformed, before being returned",
+        "default": null
       }
     },
     "output":{

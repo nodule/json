@@ -11,8 +11,8 @@
   },
   "ports":{
     "input":{
-      "in":{
-        "type":"string",
+      "json":{
+        "type":"object",
         "title":"JSON",
         "required": true
       },

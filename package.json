@@ -16,7 +16,7 @@
     "csv": "0.x.x",
     "json-path": "0.x.x",
     "xml2js": "0.x.x",
-    "json2xml": "0.x.x"
+    "json2xml": "psichi/json2xml"
   },
   "devDependencies": {
     "chit": "0.x.x"

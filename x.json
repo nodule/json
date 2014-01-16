@@ -14,7 +14,7 @@
     "csv": "0.x.x",
     "json-path": "0.x.x",
     "xml2js": "0.x.x",
-    "json2xml": "0.x.x"
+    "json2xml": "psichi/json2xml"
   },
   "nodes": [
     {
@@ -23,7 +23,7 @@
       "title": "JSON To XML",
       "description": "Converts JSON to Simple XML",
       "require": {
-        "json2xml": "0.x.x"
+        "json2xml": "psichi/json2xml"
       },
       "phrases": {
         "active": "Parsing JSON string"

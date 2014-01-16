@@ -45,10 +45,14 @@
           "out": {
             "type": "object",
             "title": "The Javascript Object"
+          },
+          "error": {
+            "type": "object",
+            "title": "Error"
           }
         }
       },
-      "fn": "output.out = json2xml(input.json, { header: input.header })\n"
+      "fn": "try {\n  output.out = json2xml(input.json, { header: input.header });\n} catch (e) {\n  output.error = e;\n}\n"
     },
     {
       "name": "parse",

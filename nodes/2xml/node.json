@@ -26,6 +26,10 @@
       "out": {
         "type":"object",
         "title":"The Javascript Object"
+      },
+      "error": {
+        "type":"object",
+        "title":"Error"
       }
     }
   }

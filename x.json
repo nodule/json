@@ -35,6 +35,11 @@
             "title": "JSON",
             "required": true
           },
+          "root": {
+            "type": "string",
+            "title": "Root Element",
+            "default": ""
+          },
           "header": {
             "type": "boolean",
             "title": "Add Header?",
@@ -52,7 +57,7 @@
           }
         }
       },
-      "fn": "try {\n  output.out = json2xml(input.json, { header: input.header });\n} catch (e) {\n  output.error = e;\n}\n"
+      "fn": "var obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n"
     },
     {
       "name": "parse",

@@ -16,6 +16,11 @@
         "title":"JSON",
         "required": true
       },
+      "root":{
+        "type":"string",
+        "title":"Root Element",
+        "default": "" 
+      },
       "header":{
         "type":"boolean",
         "title":"Add Header?",

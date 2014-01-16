@@ -13,9 +13,43 @@
     "xml2json": "0.x.x",
     "csv": "0.x.x",
     "json-path": "0.x.x",
-    "xml2js": "0.x.x"
+    "xml2js": "0.x.x",
+    "json2xml": "0.x.x"
   },
   "nodes": [
+    {
+      "name": "2xml",
+      "ns": "json",
+      "title": "JSON To XML",
+      "description": "Converts JSON to Simple XML",
+      "require": {
+        "json2xml": "0.x.x"
+      },
+      "phrases": {
+        "active": "Parsing JSON string"
+      },
+      "ports": {
+        "input": {
+          "in": {
+            "type": "string",
+            "title": "JSON",
+            "required": true
+          },
+          "header": {
+            "type": "boolean",
+            "title": "Add Header?",
+            "default": true
+          }
+        },
+        "output": {
+          "out": {
+            "type": "object",
+            "title": "The Javascript Object"
+          }
+        }
+      },
+      "fn": "output.out = json2xml(input.json, { header: input.header })\n"
+    },
     {
       "name": "parse",
       "ns": "json",

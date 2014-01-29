@@ -6,7 +6,6 @@
   "require": {
     "json2xml": "psichi/json2xml"
   },
-  "async": true,
   "phrases": {
     "active": "Parsing JSON string"
   },

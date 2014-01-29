@@ -1,4 +1,3 @@
-/*
 var obj = {};
 if(input.root) {
   obj[input.root] = input.json;
@@ -7,8 +6,8 @@ if(input.root) {
 }
 
 output.out = json2xml(obj, { header: input.header });
-*/
 
+/*
 on.input.root = function() {
   state.root = data;
 };
@@ -31,3 +30,4 @@ on.input.json = function() {
   });
 
 };
+*/

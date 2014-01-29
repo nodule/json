@@ -50,7 +50,6 @@
       "phrases": {
         "active": "Parsing JSON string"
       },
-      "async": true,
       "require": {
         "json2xml": "psichi/json2xml"
       },
@@ -58,7 +57,7 @@
       "title": "JSON To XML",
       "ns": "json",
       "name": "2xml",
-      "fn": "/*\nvar obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n*/\n\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n"
+      "fn": "var obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n\n/*\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n*/\n"
     },
     {
       "ports": {

@@ -18,16 +18,6 @@
   },
   "nodes": [
     {
-      "name": "2xml",
-      "ns": "json",
-      "title": "JSON To XML",
-      "description": "Converts JSON to Simple XML",
-      "require": {
-        "json2xml": "psichi/json2xml"
-      },
-      "phrases": {
-        "active": "Parsing JSON string"
-      },
       "ports": {
         "input": {
           "json": {
@@ -57,19 +47,20 @@
           }
         }
       },
-      "fn": "var obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n"
-    },
-    {
-      "name": "parse",
-      "ns": "json",
-      "title": "JSON Parse",
-      "description": "Parses a string into a javascript object",
-      "expose": [
-        "JSON"
-      ],
       "phrases": {
         "active": "Parsing JSON string"
       },
+      "async": true,
+      "require": {
+        "json2xml": "psichi/json2xml"
+      },
+      "description": "Converts JSON to Simple XML",
+      "title": "JSON To XML",
+      "ns": "json",
+      "name": "2xml",
+      "fn": "/*\nvar obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n*/\n\non.input.root = function() {\n  state['root'] = data;\n};\n\non.input.header = function() {\n  state['header'] = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state['root']) {\n    obj[state['root']] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state['header'] });\n  });\n\n};\n"
+    },
+    {
       "ports": {
         "input": {
           "in": {
@@ -90,19 +81,20 @@
           }
         }
       },
-      "fn": "output.out = JSON.parse(input.in, input.reviver);\n"
+      "phrases": {
+        "active": "Parsing JSON string"
+      },
+      "async": true,
+      "expose": [
+        "JSON"
+      ],
+      "description": "Parses a string into a javascript object",
+      "title": "JSON Parse",
+      "ns": "json",
+      "name": "parse",
+      "fn": "/* output.out = JSON.parse(input.in, input.reviver); */\n\non.input.in = function() {\n  output({\n    out: JSON.parse(data, state['reviver']);\n  });\n};\n\non.input.reviver = function() {\n  state['reviver'] = data;\n};\n"
     },
     {
-      "name": "path",
-      "ns": "json",
-      "title": "JSON Path",
-      "description": "JSON-Path takes a specially formatted path statement and applies it to an object graph in order to select results. The results are returned as an array of data that matches the path.",
-      "require": {
-        "json-path": "0.x.x"
-      },
-      "phrases": {
-        "active": "Performing JSON Path"
-      },
       "ports": {
         "input": {
           "json": {
@@ -126,19 +118,20 @@
           }
         }
       },
-      "fn": "output = { matches: json_path.resolve(input.json, input.path) }\n"
+      "phrases": {
+        "active": "Performing JSON Path"
+      },
+      "async": true,
+      "require": {
+        "json-path": "0.x.x"
+      },
+      "description": "JSON-Path takes a specially formatted path statement and applies it to an object graph in order to select results. The results are returned as an array of data that matches the path.",
+      "title": "JSON Path",
+      "ns": "json",
+      "name": "path",
+      "fn": "/* output = { matches: json_path.resolve(input.json, input.path) } */\non.input.json = function() {\n  output({\n   out: json_path.resolve(data, state['path'];\n  });\n};\n\non.input.path = function() {\n  state['path'] = data;\n};\n"
     },
     {
-      "name": "stringify",
-      "ns": "json",
-      "title": "JSON Stringify",
-      "description": "Stringify a javascript object",
-      "expose": [
-        "JSON"
-      ],
-      "phrases": {
-        "active": "JSON Stringifying Object"
-      },
       "ports": {
         "input": {
           "in": {
@@ -165,6 +158,16 @@
           }
         }
       },
+      "phrases": {
+        "active": "JSON Stringifying Object"
+      },
+      "expose": [
+        "JSON"
+      ],
+      "description": "Stringify a javascript object",
+      "title": "JSON Stringify",
+      "ns": "json",
+      "name": "stringify",
       "fn": "output.out = JSON.stringify(input.in, input.replacer, input.space);\n"
     }
   ],

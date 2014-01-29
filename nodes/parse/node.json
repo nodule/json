@@ -4,6 +4,7 @@
   "title": "JSON Parse",
   "description":"Parses a string into a javascript object",
   "expose": ["JSON"],
+  "async": true,
   "phrases": {
     "active": "Parsing JSON string"
   },

@@ -6,6 +6,7 @@
   "require": {
     "json-path": "0.x.x"
   },
+  "async": true,
   "phrases": {
     "active": "Performing JSON Path"
   },

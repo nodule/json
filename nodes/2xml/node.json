@@ -6,6 +6,7 @@
   "require": {
     "json2xml": "psichi/json2xml"
   },
+  "async": true,
   "phrases": {
     "active": "Parsing JSON string"
   },
@@ -19,12 +20,12 @@
       "root":{
         "type":"string",
         "title":"Root Element",
-        "default": "" 
+        "default": ""
       },
       "header":{
         "type":"boolean",
         "title":"Add Header?",
-        "default": true 
+        "default": true
       }
     },
     "output":{

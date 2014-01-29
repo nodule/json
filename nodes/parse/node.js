@@ -2,10 +2,10 @@
 
 on.input.in = function() {
   output({
-    out: JSON.parse(data, state['reviver']);
+    out: JSON.parse(data, state.reviver)
   });
 };
 
 on.input.reviver = function() {
-  state['reviver'] = data;
+  state.reviver = data;
 };

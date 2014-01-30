@@ -57,7 +57,7 @@
       "title": "JSON To XML",
       "ns": "json",
       "name": "2xml",
-      "fn": "var obj = {};\nif(input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, { header: input.header });\n\n/*\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n*/\n"
+      "fn": "var obj = {};\nif (input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, {\n  header: input.header\n});\n\n/*\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n*/\n"
     },
     {
       "ports": {
@@ -91,7 +91,7 @@
       "title": "JSON Parse",
       "ns": "json",
       "name": "parse",
-      "fn": "/* output.out = JSON.parse(input.in, input.reviver); */\n\non.input.in = function() {\n  output({\n    out: JSON.parse(data, state.reviver)\n  });\n};\n\non.input.reviver = function() {\n  state.reviver = data;\n};\n"
+      "fn": "/* output.out = JSON.parse(input.in, input.reviver); */\n\non.input. in = function () {\n  output({\n    out: JSON.parse(data, state.reviver)\n  });\n};\n\non.input.reviver = function () {\n  state.reviver = data;\n};\n"
     },
     {
       "ports": {
@@ -128,7 +128,7 @@
       "title": "JSON Path",
       "ns": "json",
       "name": "path",
-      "fn": "/* output = { matches: json_path.resolve(input.json, input.path) } */\non.input.json = function() {\n  output({\n   matches: json_path.resolve(data, state.path)\n  });\n};\n\non.input.path = function() {\n  state.path = data;\n};\n"
+      "fn": "/* output = { matches: json_path.resolve(input.json, input.path) } */\non.input.json = function () {\n  output({\n    matches: json_path.resolve(data, state.path)\n  });\n};\n\non.input.path = function () {\n  state.path = data;\n};\n"
     },
     {
       "ports": {
@@ -167,7 +167,7 @@
       "title": "JSON Stringify",
       "ns": "json",
       "name": "stringify",
-      "fn": "output.out = JSON.stringify(input.in, input.replacer, input.space);\n"
+      "fn": "output.out = JSON.stringify(input. in , input.replacer, input.space);\n"
     }
   ],
   "twigs": []

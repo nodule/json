@@ -1,10 +1,10 @@
 /* output = { matches: json_path.resolve(input.json, input.path) } */
-on.input.json = function() {
+on.input.json = function () {
   output({
-   matches: json_path.resolve(data, state.path)
+    matches: json_path.resolve(data, state.path)
   });
 };
 
-on.input.path = function() {
+on.input.path = function () {
   state.path = data;
 };

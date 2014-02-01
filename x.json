@@ -151,7 +151,7 @@
           }
         },
         "output": {
-          "json": {
+          "out": {
             "type": "string",
             "title": "The JSON string"
           }

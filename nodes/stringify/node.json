@@ -23,11 +23,11 @@
       "space":{
         "type":"number",
         "title":"Indentation length",
-        "default": 0 
+        "default": 0
       }
     },
     "output":{
-      "json": {
+      "out": {
         "type":"string",
         "title":"The JSON string"
       }

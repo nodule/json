@@ -134,7 +134,7 @@
       "ports": {
         "input": {
           "in": {
-            "type": "object",
+            "type": "any",
             "title": "Input Object",
             "required": true
           },

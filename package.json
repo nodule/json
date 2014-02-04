@@ -1,21 +1,17 @@
 {
-  "name": "nodule-utils",
-  "description": "Utility components for Chiχ",
+  "name": "nodule-json",
+  "description": "JSON for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.3",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nodule/utils.git"
+    "url": "https://github.com/nodule/json.git"
   },
   "dependencies": {
-    "inquiry": "0.x.x",
     "JSONPath": "0.x.x",
-    "glob": "3.x.x",
     "xml2json": "0.x.x",
-    "csv": "0.x.x",
     "json-path": "0.x.x",
-    "xml2js": "0.x.x",
     "json2xml": "psichi/json2xml"
   },
   "devDependencies": {
@@ -29,7 +25,7 @@
     "test": "chit"
   },
   "chix": {
-    "name": "utils",
+    "name": "json",
     "color": "rgb(230,238,30)"
   }
 }

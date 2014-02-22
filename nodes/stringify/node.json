@@ -4,6 +4,7 @@
   "title": "JSON Stringify",
   "description":"Stringify a javascript object",
   "expose": ["JSON"],
+  "async": true,
   "phrases": {
     "active": "JSON Stringifying Object"
   },
@@ -12,6 +13,7 @@
       "in":{
         "type":"any",
         "title":"Input Object",
+        "async": true,
         "required": true
       },
       "replacer":{

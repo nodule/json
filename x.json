@@ -163,7 +163,7 @@
       "title": "JSON Stringify",
       "ns": "json",
       "name": "stringify",
-      "fn": "output.out = JSON.stringify(input. in , input.replacer, input.space);\n"
+      "fn": "//output.out = JSON.stringify(input. in , input.replacer, input.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify(data, input.replacer, input.space);\n  });\n\n};\n"
     }
   ],
   "twigs": []

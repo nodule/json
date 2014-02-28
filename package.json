@@ -12,7 +12,7 @@
     "JSONPath": "0.x.x",
     "xml2json": "0.x.x",
     "json-path": "0.x.x",
-    "json2xml": "psichi/json2xml"
+    "json2xml": "0.1.x"
   },
   "devDependencies": {
     "chit": "0.x.x"

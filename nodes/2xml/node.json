@@ -4,7 +4,7 @@
   "title": "JSON To XML",
   "description":"Converts JSON to Simple XML",
   "require": {
-    "json2xml": "psichi/json2xml"
+    "json2xml": "0.1.x"
   },
   "phrases": {
     "active": "Parsing JSON string"

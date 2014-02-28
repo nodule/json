@@ -1,0 +1,965 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'i' ]
+2 info using npm@1.3.11
+3 info using node@v0.10.21
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/rob/git/nodule/json',
+5 verbose install   [ 'JSONPath', 'xml2json', 'json-path', 'json2xml', 'chit' ] ]
+6 info preinstall nodule-json@0.0.3
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'JSONPath@0.x.x', null ]
+9 verbose cache add name=undefined spec="JSONPath@0.x.x" args=["JSONPath@0.x.x",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: null,
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'JSONPath@0.x.x',
+10 verbose parsed url   path: 'JSONPath@0.x.x',
+10 verbose parsed url   href: 'JSONPath@0.x.x' }
+11 verbose cache add name="JSONPath" spec="0.x.x" args=["JSONPath","0.x.x"]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: '0.x.x',
+12 verbose parsed url   path: '0.x.x',
+12 verbose parsed url   href: '0.x.x' }
+13 verbose addNamed [ 'JSONPath', '0.x.x' ]
+14 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+15 verbose cache add [ 'xml2json@0.x.x', null ]
+16 verbose cache add name=undefined spec="xml2json@0.x.x" args=["xml2json@0.x.x",null]
+17 verbose parsed url { protocol: null,
+17 verbose parsed url   slashes: null,
+17 verbose parsed url   auth: null,
+17 verbose parsed url   host: null,
+17 verbose parsed url   port: null,
+17 verbose parsed url   hostname: null,
+17 verbose parsed url   hash: null,
+17 verbose parsed url   search: null,
+17 verbose parsed url   query: null,
+17 verbose parsed url   pathname: 'xml2json@0.x.x',
+17 verbose parsed url   path: 'xml2json@0.x.x',
+17 verbose parsed url   href: 'xml2json@0.x.x' }
+18 verbose cache add name="xml2json" spec="0.x.x" args=["xml2json","0.x.x"]
+19 verbose parsed url { protocol: null,
+19 verbose parsed url   slashes: null,
+19 verbose parsed url   auth: null,
+19 verbose parsed url   host: null,
+19 verbose parsed url   port: null,
+19 verbose parsed url   hostname: null,
+19 verbose parsed url   hash: null,
+19 verbose parsed url   search: null,
+19 verbose parsed url   query: null,
+19 verbose parsed url   pathname: '0.x.x',
+19 verbose parsed url   path: '0.x.x',
+19 verbose parsed url   href: '0.x.x' }
+20 verbose addNamed [ 'xml2json', '0.x.x' ]
+21 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+22 verbose cache add [ 'chit@0.x.x', null ]
+23 verbose cache add name=undefined spec="chit@0.x.x" args=["chit@0.x.x",null]
+24 verbose parsed url { protocol: null,
+24 verbose parsed url   slashes: null,
+24 verbose parsed url   auth: null,
+24 verbose parsed url   host: null,
+24 verbose parsed url   port: null,
+24 verbose parsed url   hostname: null,
+24 verbose parsed url   hash: null,
+24 verbose parsed url   search: null,
+24 verbose parsed url   query: null,
+24 verbose parsed url   pathname: 'chit@0.x.x',
+24 verbose parsed url   path: 'chit@0.x.x',
+24 verbose parsed url   href: 'chit@0.x.x' }
+25 verbose cache add name="chit" spec="0.x.x" args=["chit","0.x.x"]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: '0.x.x',
+26 verbose parsed url   path: '0.x.x',
+26 verbose parsed url   href: '0.x.x' }
+27 verbose addNamed [ 'chit', '0.x.x' ]
+28 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+29 verbose cache add [ 'json-path@0.x.x', null ]
+30 verbose cache add name=undefined spec="json-path@0.x.x" args=["json-path@0.x.x",null]
+31 verbose parsed url { protocol: null,
+31 verbose parsed url   slashes: null,
+31 verbose parsed url   auth: null,
+31 verbose parsed url   host: null,
+31 verbose parsed url   port: null,
+31 verbose parsed url   hostname: null,
+31 verbose parsed url   hash: null,
+31 verbose parsed url   search: null,
+31 verbose parsed url   query: null,
+31 verbose parsed url   pathname: 'json-path@0.x.x',
+31 verbose parsed url   path: 'json-path@0.x.x',
+31 verbose parsed url   href: 'json-path@0.x.x' }
+32 verbose cache add name="json-path" spec="0.x.x" args=["json-path","0.x.x"]
+33 verbose parsed url { protocol: null,
+33 verbose parsed url   slashes: null,
+33 verbose parsed url   auth: null,
+33 verbose parsed url   host: null,
+33 verbose parsed url   port: null,
+33 verbose parsed url   hostname: null,
+33 verbose parsed url   hash: null,
+33 verbose parsed url   search: null,
+33 verbose parsed url   query: null,
+33 verbose parsed url   pathname: '0.x.x',
+33 verbose parsed url   path: '0.x.x',
+33 verbose parsed url   href: '0.x.x' }
+34 verbose addNamed [ 'json-path', '0.x.x' ]
+35 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+36 silly lockFile 69306b07-JSONPath-0-x-x JSONPath@0.x.x
+37 verbose lock JSONPath@0.x.x /home/rob/.npm/69306b07-JSONPath-0-x-x.lock
+38 silly lockFile 33af7c62-xml2json-0-x-x xml2json@0.x.x
+39 verbose lock xml2json@0.x.x /home/rob/.npm/33af7c62-xml2json-0-x-x.lock
+40 silly lockFile 24e88722-chit-0-x-x chit@0.x.x
+41 verbose lock chit@0.x.x /home/rob/.npm/24e88722-chit-0-x-x.lock
+42 silly lockFile 7e3204f5-json-path-0-x-x json-path@0.x.x
+43 verbose lock json-path@0.x.x /home/rob/.npm/7e3204f5-json-path-0-x-x.lock
+44 verbose cache add [ 'json2xml@0.1.x', null ]
+45 verbose cache add name=undefined spec="json2xml@0.1.x" args=["json2xml@0.1.x",null]
+46 verbose parsed url { protocol: null,
+46 verbose parsed url   slashes: null,
+46 verbose parsed url   auth: null,
+46 verbose parsed url   host: null,
+46 verbose parsed url   port: null,
+46 verbose parsed url   hostname: null,
+46 verbose parsed url   hash: null,
+46 verbose parsed url   search: null,
+46 verbose parsed url   query: null,
+46 verbose parsed url   pathname: 'json2xml@0.1.x',
+46 verbose parsed url   path: 'json2xml@0.1.x',
+46 verbose parsed url   href: 'json2xml@0.1.x' }
+47 verbose cache add name="json2xml" spec="0.1.x" args=["json2xml","0.1.x"]
+48 verbose parsed url { protocol: null,
+48 verbose parsed url   slashes: null,
+48 verbose parsed url   auth: null,
+48 verbose parsed url   host: null,
+48 verbose parsed url   port: null,
+48 verbose parsed url   hostname: null,
+48 verbose parsed url   hash: null,
+48 verbose parsed url   search: null,
+48 verbose parsed url   query: null,
+48 verbose parsed url   pathname: '0.1.x',
+48 verbose parsed url   path: '0.1.x',
+48 verbose parsed url   href: '0.1.x' }
+49 verbose addNamed [ 'json2xml', '0.1.x' ]
+50 verbose addNamed [ null, '>=0.1.0-0 <0.2.0-0' ]
+51 silly lockFile 1b03de24-json2xml-0-1-x json2xml@0.1.x
+52 verbose lock json2xml@0.1.x /home/rob/.npm/1b03de24-json2xml-0-1-x.lock
+53 silly addNameRange { name: 'JSONPath', range: '>=0.0.0-0 <1.0.0-0', hasData: false }
+54 silly addNameRange { name: 'xml2json', range: '>=0.0.0-0 <1.0.0-0', hasData: false }
+55 silly addNameRange { name: 'chit', range: '>=0.0.0-0 <1.0.0-0', hasData: false }
+56 silly addNameRange { name: 'json-path',
+56 silly addNameRange   range: '>=0.0.0-0 <1.0.0-0',
+56 silly addNameRange   hasData: false }
+57 silly addNameRange { name: 'json2xml', range: '>=0.1.0-0 <0.2.0-0', hasData: false }
+58 verbose url raw chit
+59 verbose url resolving [ 'https://registry.npmjs.org/', './chit' ]
+60 verbose url resolved https://registry.npmjs.org/chit
+61 info trying registry request attempt 1 at 23:00:44
+62 verbose etag "5U2RYK1IVZ8USRA52MQ1NQ7QL"
+63 http GET https://registry.npmjs.org/chit
+64 verbose url raw json2xml
+65 verbose url resolving [ 'https://registry.npmjs.org/', './json2xml' ]
+66 verbose url resolved https://registry.npmjs.org/json2xml
+67 info trying registry request attempt 1 at 23:00:44
+68 verbose etag "1DAE72VGJY16SOHYYUX1ANRPT"
+69 http GET https://registry.npmjs.org/json2xml
+70 verbose url raw JSONPath
+71 verbose url resolving [ 'https://registry.npmjs.org/', './JSONPath' ]
+72 verbose url resolved https://registry.npmjs.org/JSONPath
+73 info trying registry request attempt 1 at 23:00:44
+74 verbose etag "A2RT4BI23L4RTY47HDAEQ2HQP"
+75 http GET https://registry.npmjs.org/JSONPath
+76 verbose url raw xml2json
+77 verbose url resolving [ 'https://registry.npmjs.org/', './xml2json' ]
+78 verbose url resolved https://registry.npmjs.org/xml2json
+79 info trying registry request attempt 1 at 23:00:44
+80 verbose etag "73X9Z0RYFO76DKD0FSOP8JE2D"
+81 http GET https://registry.npmjs.org/xml2json
+82 verbose url raw json-path
+83 verbose url resolving [ 'https://registry.npmjs.org/', './json-path' ]
+84 verbose url resolved https://registry.npmjs.org/json-path
+85 info trying registry request attempt 1 at 23:00:44
+86 verbose etag "5BPCEJI06EP128SL74AFS70VE"
+87 http GET https://registry.npmjs.org/json-path
+88 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+89 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+90 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+91 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+92 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+93 info trying registry request attempt 2 at 23:00:54
+94 verbose etag "73X9Z0RYFO76DKD0FSOP8JE2D"
+95 http GET https://registry.npmjs.org/xml2json
+96 info trying registry request attempt 2 at 23:00:54
+97 verbose etag "1DAE72VGJY16SOHYYUX1ANRPT"
+98 http GET https://registry.npmjs.org/json2xml
+99 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+100 info trying registry request attempt 2 at 23:00:54
+101 verbose etag "5BPCEJI06EP128SL74AFS70VE"
+102 http GET https://registry.npmjs.org/json-path
+103 info trying registry request attempt 2 at 23:00:54
+104 verbose etag "A2RT4BI23L4RTY47HDAEQ2HQP"
+105 http GET https://registry.npmjs.org/JSONPath
+106 info trying registry request attempt 2 at 23:00:54
+107 verbose etag "5U2RYK1IVZ8USRA52MQ1NQ7QL"
+108 http GET https://registry.npmjs.org/chit
+109 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+110 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+111 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+112 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+113 info trying registry request attempt 3 at 23:01:54
+114 verbose etag "73X9Z0RYFO76DKD0FSOP8JE2D"
+115 http GET https://registry.npmjs.org/xml2json
+116 silly registry.get cb [ 304, undefined ]
+117 verbose etag xml2json from cache
+118 silly addNameRange number 2 { name: 'xml2json', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+119 silly addNameRange versions [ 'xml2json',
+119 silly addNameRange   [ '0.1.0',
+119 silly addNameRange     '0.1.1',
+119 silly addNameRange     '0.2.0',
+119 silly addNameRange     '0.2.1',
+119 silly addNameRange     '0.2.2',
+119 silly addNameRange     '0.2.3',
+119 silly addNameRange     '0.2.4',
+119 silly addNameRange     '0.3.0',
+119 silly addNameRange     '0.3.1',
+119 silly addNameRange     '0.3.2',
+119 silly addNameRange     '0.4.0' ] ]
+120 verbose addNamed [ 'xml2json', '0.4.0' ]
+121 verbose addNamed [ '0.4.0', '0.4.0' ]
+122 silly lockFile 7e41c6a4-xml2json-0-4-0 xml2json@0.4.0
+123 verbose lock xml2json@0.4.0 /home/rob/.npm/7e41c6a4-xml2json-0-4-0.lock
+124 info trying registry request attempt 3 at 23:01:54
+125 verbose etag "1DAE72VGJY16SOHYYUX1ANRPT"
+126 http GET https://registry.npmjs.org/json2xml
+127 silly lockFile 7e41c6a4-xml2json-0-4-0 xml2json@0.4.0
+128 silly lockFile 7e41c6a4-xml2json-0-4-0 xml2json@0.4.0
+129 silly lockFile 33af7c62-xml2json-0-x-x xml2json@0.x.x
+130 silly lockFile 33af7c62-xml2json-0-x-x xml2json@0.x.x
+131 info trying registry request attempt 3 at 23:01:54
+132 verbose etag "5BPCEJI06EP128SL74AFS70VE"
+133 http GET https://registry.npmjs.org/json-path
+134 info trying registry request attempt 3 at 23:01:54
+135 verbose etag "A2RT4BI23L4RTY47HDAEQ2HQP"
+136 http GET https://registry.npmjs.org/JSONPath
+137 silly registry.get cb [ 304, undefined ]
+138 verbose etag JSONPath from cache
+139 silly addNameRange number 2 { name: 'JSONPath', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+140 silly addNameRange versions [ 'JSONPath',
+140 silly addNameRange   [ '0.8.0',
+140 silly addNameRange     '0.8.1',
+140 silly addNameRange     '0.8.2',
+140 silly addNameRange     '0.8.3',
+140 silly addNameRange     '0.8.4',
+140 silly addNameRange     '0.8.5',
+140 silly addNameRange     '0.9.0',
+140 silly addNameRange     '0.9.1' ] ]
+141 verbose addNamed [ 'JSONPath', '0.9.1' ]
+142 verbose addNamed [ '0.9.1', '0.9.1' ]
+143 silly lockFile cc0bb7c2-JSONPath-0-9-1 JSONPath@0.9.1
+144 verbose lock JSONPath@0.9.1 /home/rob/.npm/cc0bb7c2-JSONPath-0-9-1.lock
+145 silly lockFile cc0bb7c2-JSONPath-0-9-1 JSONPath@0.9.1
+146 silly lockFile cc0bb7c2-JSONPath-0-9-1 JSONPath@0.9.1
+147 silly lockFile 69306b07-JSONPath-0-x-x JSONPath@0.x.x
+148 silly lockFile 69306b07-JSONPath-0-x-x JSONPath@0.x.x
+149 silly registry.get cb [ 304, undefined ]
+150 verbose etag json2xml from cache
+151 silly addNameRange number 2 { name: 'json2xml', range: '>=0.1.0-0 <0.2.0-0', hasData: true }
+152 silly addNameRange versions [ 'json2xml', [ '0.0.1', '0.1.1' ] ]
+153 verbose addNamed [ 'json2xml', '0.1.1' ]
+154 verbose addNamed [ '0.1.1', '0.1.1' ]
+155 silly lockFile 7c2b6236-json2xml-0-1-1 json2xml@0.1.1
+156 verbose lock json2xml@0.1.1 /home/rob/.npm/7c2b6236-json2xml-0-1-1.lock
+157 silly lockFile 7c2b6236-json2xml-0-1-1 json2xml@0.1.1
+158 silly lockFile 7c2b6236-json2xml-0-1-1 json2xml@0.1.1
+159 silly lockFile 1b03de24-json2xml-0-1-x json2xml@0.1.x
+160 silly lockFile 1b03de24-json2xml-0-1-x json2xml@0.1.x
+161 silly registry.get cb [ 304, undefined ]
+162 verbose etag json-path from cache
+163 silly addNameRange number 2 { name: 'json-path', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+164 silly addNameRange versions [ 'json-path', [ '0.0.1', '0.1.1', '0.1.2', '0.1.3' ] ]
+165 verbose addNamed [ 'json-path', '0.1.3' ]
+166 verbose addNamed [ '0.1.3', '0.1.3' ]
+167 silly lockFile 2742d95c-json-path-0-1-3 json-path@0.1.3
+168 verbose lock json-path@0.1.3 /home/rob/.npm/2742d95c-json-path-0-1-3.lock
+169 info trying registry request attempt 3 at 23:01:55
+170 verbose etag "5U2RYK1IVZ8USRA52MQ1NQ7QL"
+171 http GET https://registry.npmjs.org/chit
+172 silly lockFile 2742d95c-json-path-0-1-3 json-path@0.1.3
+173 silly lockFile 2742d95c-json-path-0-1-3 json-path@0.1.3
+174 silly lockFile 7e3204f5-json-path-0-x-x json-path@0.x.x
+175 silly lockFile 7e3204f5-json-path-0-x-x json-path@0.x.x
+176 silly registry.get cb [ 304, undefined ]
+177 verbose etag chit from cache
+178 silly addNameRange number 2 { name: 'chit', range: '>=0.0.0-0 <1.0.0-0', hasData: true }
+179 silly addNameRange versions [ 'chit',
+179 silly addNameRange   [ '0.0.3',
+179 silly addNameRange     '0.1.0',
+179 silly addNameRange     '0.1.1',
+179 silly addNameRange     '0.2.0',
+179 silly addNameRange     '0.3.0',
+179 silly addNameRange     '0.4.0',
+179 silly addNameRange     '0.4.1',
+179 silly addNameRange     '0.4.2',
+179 silly addNameRange     '0.4.3',
+179 silly addNameRange     '0.4.4',
+179 silly addNameRange     '0.4.5' ] ]
+180 verbose addNamed [ 'chit', '0.4.5' ]
+181 verbose addNamed [ '0.4.5', '0.4.5' ]
+182 silly lockFile 4aabf1bd-chit-0-4-5 chit@0.4.5
+183 verbose lock chit@0.4.5 /home/rob/.npm/4aabf1bd-chit-0-4-5.lock
+184 silly lockFile 4aabf1bd-chit-0-4-5 chit@0.4.5
+185 silly lockFile 4aabf1bd-chit-0-4-5 chit@0.4.5
+186 silly lockFile 24e88722-chit-0-x-x chit@0.x.x
+187 silly lockFile 24e88722-chit-0-x-x chit@0.x.x
+188 silly resolved [ { name: 'xml2json',
+188 silly resolved     version: '0.4.0',
+188 silly resolved     author: { name: 'Andrew Turley' },
+188 silly resolved     email: 'aturley@buglabs.net',
+188 silly resolved     description: 'Converts xml to json and viceverza, using node-expat.',
+188 silly resolved     repository:
+188 silly resolved      { type: 'git',
+188 silly resolved        url: 'git://github.com/buglabs/node-xml2json.git' },
+188 silly resolved     main: 'index',
+188 silly resolved     contributors: [ [Object] ],
+188 silly resolved     dependencies: { 'node-expat': '2.1.4' },
+188 silly resolved     bin: { xml2json: 'bin/xml2json' },
+188 silly resolved     readme: '# Simple SAX-based XML2JSON Parser.\n\nIt does not parse the following elements:\n\n* CDATA sections (*)\n* Processing instructions\n* XML declarations\n* Entity declarations\n* Comments\n\n## Installation\n```\n$ npm install xml2json\n```\n\n## Usage\n```javascript\nvar parser = require(\'xml2json\');\n\nvar xml = "<foo>bar</foo>";\nvar json = parser.toJson(xml); //returns a string containing the JSON structure by default\nconsole.log(json);\n```\n## API\n\n```javascript\nparser.toJson(xml, options);\n```\n```javascript\nparser.toXml(json, options);\n```\n\n### Options object\n\nDefault values:\n```javascript\nvar options = {\n    object: false,\n    reversible: false,\n    coerce: true,\n    sanitize: true,\n    trim: true,\n    arrayNotation: false\n};\n```\n\n* **object:** Returns a Javascript object instead of a JSON string\n* **reversible:** Makes the JSON reversible to XML (*)\n* **coerce:** Makes type coercion. i.e.: numbers and booleans present in attributes and element values are converted from string to its correspondent data types.\n* **trim:** Removes leading and trailing whitespaces as well as line terminators in element values.\n* **arrayNotation:** XML child nodes are always treated as arrays\n* **sanitize:** Sanitizes the following characters present in element values:\n\n```javascript\nvar chars =  {\n    \'<\': \'&lt;\',\n    \'>\': \'&gt;\',\n    \'(\': \'&#40;\',\n    \')\': \'&#41;\',\n    \'#\': \'&#35;\',\n    \'&\': \'&amp;\',\n    \'"\': \'&quot;\',\n    "\'": \'&apos;\'\n};\n```\n\n\n\n\n(*) xml2json tranforms CDATA content to JSON, but it doesn\'t generate a reversible structure.\n\n## License\n(The MIT License)\n\nCopyright 2012 BugLabs. All rights reserved.\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the "Software"), to\ndeal in the Software without restriction, including without limitation the\nrights to use, copy, modify, merge, publish, distribute, sublicense, and/or\nsell copies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in\nall copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS\nIN THE SOFTWARE.\n',
+188 silly resolved     readmeFilename: 'README.md',
+188 silly resolved     bugs: { url: 'https://github.com/buglabs/node-xml2json/issues' },
+188 silly resolved     _id: 'xml2json@0.4.0',
+188 silly resolved     _from: 'xml2json@0.x.x' },
+188 silly resolved   { author: { name: 'Stefan Goessner' },
+188 silly resolved     name: 'JSONPath',
+188 silly resolved     description: 'A JS implementation of JSONPath',
+188 silly resolved     contributors: [ [Object], [Object], [Object] ],
+188 silly resolved     version: '0.9.1',
+188 silly resolved     repository: { type: 'git', url: 'git://github.com/s3u/JSONPath.git' },
+188 silly resolved     main: './lib/jsonpath',
+188 silly resolved     dependencies: { underscore: '1.3.x' },
+188 silly resolved     devDependencies: { nodeunit: '0.6.x' },
+188 silly resolved     readme: '[![build status](https://secure.travis-ci.org/s3u/JSONPath.png)](http://travis-ci.org/s3u/JSONPath)\nInstall\n=======\n    \n    npm install JSONPath\n\nEvaluate\n========\n\n    var jsonpath = require(\'JSONPath\');\n    jsonpath.eval(obj, path);\n\nOr more concisely:\n\n\tvar jsonpath = require(\'JSONPath\').eval;\n\tjsonpath(obj, path);\n\nExamples\n========\n\nGiven the following JSON, taken from http://goessner.net/articles/JsonPath/ :\n\n\t{ "store": {\n\t    "book": [ \n\t      { "category": "reference",\n\t        "author": "Nigel Rees",\n\t        "title": "Sayings of the Century",\n\t        "price": 8.95\n\t      },\n\t      { "category": "fiction",\n\t        "author": "Evelyn Waugh",\n\t        "title": "Sword of Honour",\n\t        "price": 12.99\n\t      },\n\t      { "category": "fiction",\n\t        "author": "Herman Melville",\n\t        "title": "Moby Dick",\n\t        "isbn": "0-553-21311-3",\n\t        "price": 8.99\n\t      },\n\t      { "category": "fiction",\n\t        "author": "J. R. R. Tolkien",\n\t        "title": "The Lord of the Rings",\n\t        "isbn": "0-395-19395-8",\n\t        "price": 22.99\n\t      }\n\t    ],\n\t    "bicycle": {\n\t      "color": "red",\n\t      "price": 19.95\n\t    }\n\t  }\n\t}\n\n\nXPath               | JSONPath               | Result\n------------------- | ---------------------- | -------------------------------------\n/store/book/author\t| $.store.book[*].author | the authors of all books in the store \n//author            | $..author              | all authors \n/store/*            | $.store.*              | all things in store, which are some books and a red bicycle.\n/store//price       | $.store..price         | the price of everything in the store.\n//book[3]           | $..book[2]             | the third book\n//book[last()]      | $..book[(@.length-1)]  | the last book in order.\n                    | $..book[-1:]           |\n//book[position()<3]| $..book[0,1]           | the first two books\n                    | $..book[:2]            | \n//book[isbn]        | $..book[?(@.isbn)]     | filter all books with isbn number\n//book[price<10]    | $..book[?(@.price<10)] | filter all books cheapier than 10\n//*                 | $..*                   |all Elements in XML document. All members of JSON structure.\n\n\n\nSee http://www.opensource.org/licenses/mit-license.php for license.\n',
+188 silly resolved     readmeFilename: 'README.md',
+188 silly resolved     bugs: { url: 'https://github.com/s3u/JSONPath/issues' },
+188 silly resolved     _id: 'JSONPath@0.9.1',
+188 silly resolved     _from: 'JSONPath@0.x.x' },
+188 silly resolved   { name: 'json2xml',
+188 silly resolved     description: 'Simple JavaScript Object to XML string converter.',
+188 silly resolved     version: '0.1.1',
+188 silly resolved     homepage: 'https://github.com/alanclarke/node-json2xml',
+188 silly resolved     author: { name: 'Etienne Lachance', email: 'et@etiennelachance.com' },
+188 silly resolved     contributors: [ [Object], [Object] ],
+188 silly resolved     repository:
+188 silly resolved      { type: 'git',
+188 silly resolved        url: 'git://github.com/estheban/node-json2xml.git' },
+188 silly resolved     bugs: { url: 'https://github.com/estheban/node-json2xml/issues' },
+188 silly resolved     licenses: [ [Object] ],
+188 silly resolved     main: 'lib/json2xml',
+188 silly resolved     engines: { node: '>= 0.6.0' },
+188 silly resolved     scripts: { test: 'grunt test' },
+188 silly resolved     devDependencies: { grunt: '~0.3.11' },
+188 silly resolved     keywords: [],
+188 silly resolved     readme: 'node-json2xml\n===========\n\nDescription\n-----------\n\nSimple JavaScript Object to XML string converter.\n\nInstallation\n------------\n\nSimplest way to install `json2xml` is to use [npm](http://npmjs.org), just `npm\ninstall json2xml` which will download json2xml and all dependencies.\n\nSimple usage\n-----------\n    \n    var json2xml = require(\'json2xml\');\n    json2xml({a:1});\n    //<a>1</a>\n\t    \n\nOptions\n-----------\n\n\tadd header:\n\n\tjson2xml({a:1}, { header:true });\n\t//<?xml version="1.0" encoding="UTF-8"?><a>1</a>\n\n\tadd node attributes:\n\n\tjson2xml({a:1, attr:{b:2,c:3 }}, { attributes_key:\'attr\' });\t\n\t// <a b="2" c="3" >1</a>',
+188 silly resolved     _id: 'json2xml@0.1.1',
+188 silly resolved     dist: { shasum: '03d51836b3b3e9a53980132e3a3d07c50bb7d9ec' },
+188 silly resolved     _from: 'json2xml@0.1.x' },
+188 silly resolved   { name: 'json-path',
+188 silly resolved     version: '0.1.3',
+188 silly resolved     author: { name: 'Phillip Clark', email: 'phillip@flitbit.com' },
+188 silly resolved     description: 'JSON-Path utility (XPath for JSON) for nodejs and modern browsers.',
+188 silly resolved     main: 'index.js',
+188 silly resolved     directories: { example: 'examples', test: 'test' },
+188 silly resolved     scripts: { test: 'mocha -R spec' },
+188 silly resolved     dependencies: { 'json-ptr': '~0.1.1' },
+188 silly resolved     devDependencies: { 'expect.js': '~0.2.0', mocha: '~1.13.0' },
+188 silly resolved     license: 'MIT',
+188 silly resolved     repository: { type: 'git', url: 'https://github.com/flitbit/json-path' },
+188 silly resolved     readme: 'json-path (alpha) [![Build Status](https://travis-ci.org/flitbit/json-path.png)](http://travis-ci.org/flitbit/json-path)\n=========\n\nJSON-Path utility (XPath for JSON) for nodejs and modern browsers.\n\nYou may be looking for the prior work [found here](http://goessner.net/articles/JsonPath/). This implementation is a new JSON-Path syntax building on [JSON Pointer (RFC 6901)](http://tools.ietf.org/html/rfc6901) in order to ensure that any valid JSON pointer is also valid JSON-Path.\n\n**Warning:** This is a work in progress - I am actively adding selection expressions and have yet to optimize, but as I use it in a few other projects I went ahead and made it available via `npm`. Until I take the **alpha** tag off you should look to the examples and test to understand the selection path syntax.\n\n## Example\n\n[flikr-example-2.js](https://github.com/flitbit/json-path/blob/master/examples/flikr-example-2.js)\n```javascript\nvar jpath = require(\'json-path\')\n, http = require(\'http\')\n, util = require(\'util\')\n;\n\nvar feed = "http://api.flickr.com/services/feeds/photos_public.gne?tags=beach,pipeline&tagmode=all&format=json&jsoncallback=processResponse"\n;\n\nfunction processResponse(json) {\n\tvar res = jpath.resolve(json, "#/items[first(3)]take(/title,/author,media=/media/m)")\n\tconsole.log( util.inspect(res, false, 5) );\n}\n\nhttp.get(feed, function(res) {\n\tconsole.log("Got response: " + res.statusCode);\n\n\tvar data = \'\';\n\n\tres.on(\'data\', function (chunk){\n\t\tdata += chunk;\n\t});\n\n\tres.on(\'end\',function(){\n\t\t// result is formatted as jsonp... this is for illustration only.\n\t\teval(data);\n\t})\n}).on(\'error\', function(e) {\n\tconsole.log("Got error: " + e.message);\n});\n```\n\n## Installation\n\n[node.js](http://nodejs.org)\n```bash\n$ npm install json-path\n```\n\n## Basics\n\nJSON-Path takes a specially formatted *path* statement and applies it to an object graph in order to *select* results. The results are returned as an array of data that matches the path.\n\nMost paths start out looking like a JSON Pointer...\n\n```javascript\n// From: http://goessner.net/articles/JsonPath/\nvar data = {\n  store: {\n    book: [\n      { category: "reference",\n        author: "Nigel Rees",\n        title: "Sayings of the Century",\n        price: 8.95\n      },\n      { category: "fiction",\n        author: "Evelyn Waugh",\n        title: "Sword of Honour",\n        price: 12.99\n      },\n      { category: "fiction",\n        author: "Herman Melville",\n        title: "Moby Dick",\n        isbn: "0-553-21311-3",\n        price: 8.99\n      },\n      { category: "fiction",\n        author: "J. R. R. Tolkien",\n        title: "The Lord of the Rings",\n        isbn: "0-395-19395-8",\n        price: 22.99\n      }\n    ],\n    bicycle: {\n      color: "red",\n      price: 19.95\n    }\n  }\n};\n```\n\nThe pointer `/store/book/0` refers to the first book in the array of books (the one by Nigen Rees).\n\n**Differentiator**\n\nThe thing that makes JSON-Path different from JSON-Pointer is that you can do more than reference a single point in a structure. Instead, you are able to `select` many pieces of data out of a structure, such as:\n\n`/store/book[*]/price`\n```javascript\n[8.95, 12.99, 8.99, 22.99]\n```\n\nIn the preceding example, the path `/store/book[*]/price` has three distinct statements:\n\nStatement | Meaning\n--- | ---\n`/store/book` | Get the book property from store. This is similar to `data.store.book` in javascript.\n`*` | Select any element (or property).\n`/price` | Select the price property.\n\nStarting with the original data, each statement refines the data, usually by selecting parts. As each statement is processed, it is given the results from the previous statement and may make further selections, until the final selections are returned to the caller. It works something like map-reduce; or if you like, something like list-comprehensions.\n\n**Distinguishing Statements**\n\nStatements are distinguished from one another using the square-brackets `[` and `]`. In many cases, the parser can infer where one statement ends and another begins, such as in the preceding example `/store/book[*]/price`. However, the parser understands the equivelant, fully specified path `[/store/book][*][/price]`.\n\nPaths can have as many distinct statements as you need to select just the right data. Since it extends JSON-Pointer, you must take care when your path contains square-brackets as part of property names such as the following contrived example:\n\n```javascript\nvar data = {\n\t\'my[\': {\n\t\tcontrived: {\n\t\t\t\'example]\': { should: "mess with", your: "noodel" } } }\n};\n```\n\nIn this data, the property names `my[` and `example]` are valid but would cuase ambiguities for either the parser or the processing of statements. In these cases, you must use the URI fragment identifier representation described in [RFC 6901 Section 6](http://tools.ietf.org/html/rfc6901#section-6). For instance, to access `data[\'my[\'].contrived[\'example]\'].your` you would need the path `#/my%5B/contrived/example%5D/your`.\n\n### More Power\n\nJSON-Path becomes more powerful with a few additional types of statements:\n\nStatement | Meaning\n--- | ---\n`..` | Makes an exhaustive descent, executing the next statement against each branch of the object-graph.\n`take(s0,s1,...)` | Takes one or more items from the structure, each specified as a [JSON Pointer](http://tools.ietf.org/html/draft-ietf-appsawg-json-pointer-09).\n`@` | Uses the user-supplied function to select or filter data.\n\nConsider the following examples using the same preceding data:\n\nPath | Result\n--- | ---\n`/store[..]/price` | Selects all prices, from books and the bicycle.\n`../isbn` | Selects all ISBN numbers, wherever they are in the structure.\n`/store/book[*]take(/author,/title)` | Selects author and title from each book.\n`/store/book[*][@]` | Selects all books, providing each to the user-supplied selection method.\n\n**User Supplied Selection Methods**\n\nJSON-Path supports the use of user-supplied selections - which will need to fill in until the expression syntax is completed. Mindful of the preceding data, consider the following code:\n\n```javascript\nvar jpath = require(\'json-path\')\n, expect  = require(\'expect.js\')\n, data    = require(\'./example-data\')\n\nvar p = jpath.create("#/store/book[*][@]");\n\nvar res = p.resolve(data, function(obj, accum) {\n  if (typeof obj.price === \'number\' && obj.price < 10)\n    accum.push(obj);\n  return accum;\n});\n\n// Expect the result to have the two books priced under $10...\nexpect(res).to.contain(data["store"]["book"][0]);\nexpect(res).to.contain(data["store"]["book"][2]);\nexpect(res).to.have.length(2);\n\n```\n\nThe example above illustrates user-defined selection given to `resolve` used in place of the `@`.\n\nTo use more than one user-defined selections, refer to selection functions by name and provide implementations when resolving the path:\n\n```javascript\nvar jpath = require(\'json-path\')\n, expect = require(\'expect.js\')\n, data = require(\'./example-data\')\n\nvar p = jpath.create("#/store/book[*][@lt10][@format]");\n\nvar res = p.resolve(data, {\n\n\tlt10: function(obj, accum) {\n\t\tif (typeof obj.price === \'number\' && obj.price < 10)\n\t\t\taccum.push(obj);\n\t\treturn accum;\n\t},\n\n\tformat: function(obj, accum) {\n\t\taccum.push(obj.title.concat(\n\t\t\t": $", obj.price\n\t\t\t));\n\t\treturn accum;\n\t}\n\n});\n\n// Expect the result to have formatted strings for\n// the twb books priced under $10...\nexpect(res).to.contain("Sayings of the Century: $8.95");\nexpect(res).to.contain("Moby Dick: $8.99");\nexpect(res).to.have.length(2);\n```\n',
+188 silly resolved     readmeFilename: 'README.md',
+188 silly resolved     bugs: { url: 'https://github.com/flitbit/json-path/issues' },
+188 silly resolved     _id: 'json-path@0.1.3',
+188 silly resolved     _from: 'json-path@0.x.x' },
+188 silly resolved   { name: 'chit',
+188 silly resolved     description: 'Chiχ Testing',
+188 silly resolved     version: '0.4.5',
+188 silly resolved     author: { name: 'Rob Halff', email: 'rob.halff@gmail.com' },
+188 silly resolved     license: 'MIT',
+188 silly resolved     repository: { type: 'git', url: 'https://github.com/psichi/chit.git' },
+188 silly resolved     keywords: [ 'chix', 'fbp', 'test', 'flow' ],
+188 silly resolved     engines: { node: '0.x.x' },
+188 silly resolved     dependencies:
+188 silly resolved      { glob: '3.x.x',
+188 silly resolved        request: '2.x.x',
+188 silly resolved        commander: '2.x.x',
+188 silly resolved        'json-gate': '0.x.x',
+188 silly resolved        'chix-flow': '0.x.x' },
+188 silly resolved     devDependencies:
+188 silly resolved      { grunt: '0.x.x',
+188 silly resolved        'grunt-release': '0.x.x',
+188 silly resolved        'grunt-contrib-jshint': '0.x.x' },
+188 silly resolved     bin: { chit: './bin/chit' },
+188 silly resolved     readme: 'Chit - Chiχ Package Tester\n==========================\n\nWill test a Chiχ Package repository for correctness.\n',
+188 silly resolved     readmeFilename: 'README.md',
+188 silly resolved     bugs: { url: 'https://github.com/psichi/chit/issues' },
+188 silly resolved     _id: 'chit@0.4.5',
+188 silly resolved     _from: 'chit@0.x.x' } ]
+189 info install xml2json@0.4.0 into /home/rob/git/nodule/json
+190 info install JSONPath@0.9.1 into /home/rob/git/nodule/json
+191 info install json2xml@0.1.1 into /home/rob/git/nodule/json
+192 info install json-path@0.1.3 into /home/rob/git/nodule/json
+193 info install chit@0.4.5 into /home/rob/git/nodule/json
+194 info installOne xml2json@0.4.0
+195 info installOne JSONPath@0.9.1
+196 info installOne json2xml@0.1.1
+197 info installOne json-path@0.1.3
+198 info installOne chit@0.4.5
+199 info /home/rob/git/nodule/json/node_modules/xml2json unbuild
+200 info /home/rob/git/nodule/json/node_modules/JSONPath unbuild
+201 info /home/rob/git/nodule/json/node_modules/json2xml unbuild
+202 info /home/rob/git/nodule/json/node_modules/json-path unbuild
+203 info /home/rob/git/nodule/json/node_modules/chit unbuild
+204 verbose tar unpack /home/rob/.npm/xml2json/0.4.0/package.tgz
+205 silly lockFile 13d9b869-odule-json-node-modules-xml2json tar:///home/rob/git/nodule/json/node_modules/xml2json
+206 verbose lock tar:///home/rob/git/nodule/json/node_modules/xml2json /home/rob/.npm/13d9b869-odule-json-node-modules-xml2json.lock
+207 silly lockFile 09e5cbb7-b-npm-xml2json-0-4-0-package-tgz tar:///home/rob/.npm/xml2json/0.4.0/package.tgz
+208 verbose lock tar:///home/rob/.npm/xml2json/0.4.0/package.tgz /home/rob/.npm/09e5cbb7-b-npm-xml2json-0-4-0-package-tgz.lock
+209 verbose tar unpack /home/rob/.npm/JSONPath/0.9.1/package.tgz
+210 silly lockFile 6bf4db2a-odule-json-node-modules-JSONPath tar:///home/rob/git/nodule/json/node_modules/JSONPath
+211 verbose lock tar:///home/rob/git/nodule/json/node_modules/JSONPath /home/rob/.npm/6bf4db2a-odule-json-node-modules-JSONPath.lock
+212 silly lockFile d26de4c0-b-npm-JSONPath-0-9-1-package-tgz tar:///home/rob/.npm/JSONPath/0.9.1/package.tgz
+213 verbose lock tar:///home/rob/.npm/JSONPath/0.9.1/package.tgz /home/rob/.npm/d26de4c0-b-npm-JSONPath-0-9-1-package-tgz.lock
+214 verbose tar unpack /home/rob/.npm/json2xml/0.1.1/package.tgz
+215 silly lockFile 892c6b7b-odule-json-node-modules-json2xml tar:///home/rob/git/nodule/json/node_modules/json2xml
+216 verbose lock tar:///home/rob/git/nodule/json/node_modules/json2xml /home/rob/.npm/892c6b7b-odule-json-node-modules-json2xml.lock
+217 silly lockFile c9018b2a-b-npm-json2xml-0-1-1-package-tgz tar:///home/rob/.npm/json2xml/0.1.1/package.tgz
+218 verbose lock tar:///home/rob/.npm/json2xml/0.1.1/package.tgz /home/rob/.npm/c9018b2a-b-npm-json2xml-0-1-1-package-tgz.lock
+219 verbose tar unpack /home/rob/.npm/json-path/0.1.3/package.tgz
+220 silly lockFile fe5a387e-dule-json-node-modules-json-path tar:///home/rob/git/nodule/json/node_modules/json-path
+221 verbose lock tar:///home/rob/git/nodule/json/node_modules/json-path /home/rob/.npm/fe5a387e-dule-json-node-modules-json-path.lock
+222 silly lockFile aa6650c6--npm-json-path-0-1-3-package-tgz tar:///home/rob/.npm/json-path/0.1.3/package.tgz
+223 verbose lock tar:///home/rob/.npm/json-path/0.1.3/package.tgz /home/rob/.npm/aa6650c6--npm-json-path-0-1-3-package-tgz.lock
+224 verbose tar unpack /home/rob/.npm/chit/0.4.5/package.tgz
+225 silly lockFile 5fca9d9a-it-nodule-json-node-modules-chit tar:///home/rob/git/nodule/json/node_modules/chit
+226 verbose lock tar:///home/rob/git/nodule/json/node_modules/chit /home/rob/.npm/5fca9d9a-it-nodule-json-node-modules-chit.lock
+227 silly lockFile a17865dc-e-rob-npm-chit-0-4-5-package-tgz tar:///home/rob/.npm/chit/0.4.5/package.tgz
+228 verbose lock tar:///home/rob/.npm/chit/0.4.5/package.tgz /home/rob/.npm/a17865dc-e-rob-npm-chit-0-4-5-package-tgz.lock
+229 silly gunzTarPerm modes [ '755', '644' ]
+230 silly gunzTarPerm modes [ '755', '644' ]
+231 silly gunzTarPerm modes [ '755', '644' ]
+232 silly gunzTarPerm modes [ '755', '644' ]
+233 silly gunzTarPerm modes [ '755', '644' ]
+234 silly gunzTarPerm extractEntry package.json
+235 silly gunzTarPerm extractEntry package.json
+236 silly gunzTarPerm extractEntry .npmignore
+237 silly gunzTarPerm extractEntry README.md
+238 silly gunzTarPerm extractEntry .npmignore
+239 silly gunzTarPerm extractEntry README.md
+240 silly gunzTarPerm extractEntry package.json
+241 silly gunzTarPerm extractEntry .npmignore
+242 silly gunzTarPerm extractEntry README.md
+243 silly gunzTarPerm extractEntry package.json
+244 silly gunzTarPerm extractEntry package.json
+245 silly gunzTarPerm extractEntry index.js
+246 silly gunzTarPerm extractEntry bin/xml2json
+247 silly gunzTarPerm extractEntry .travis.yml
+248 silly gunzTarPerm extractEntry CHANGES.md
+249 silly gunzTarPerm extractEntry .npmignore
+250 silly gunzTarPerm extractEntry README.md
+251 silly gunzTarPerm extractEntry README.md
+252 silly gunzTarPerm extractEntry LICENSE
+253 silly gunzTarPerm extractEntry grunt.js
+254 silly gunzTarPerm extractEntry index.js
+255 silly gunzTarPerm extractEntry lib/index.js
+256 silly gunzTarPerm extractEntry lib/json2xml.js
+257 silly gunzTarPerm extractEntry Makefile
+258 silly gunzTarPerm extractEntry lib/jsonpath.js
+259 silly gunzTarPerm extractEntry index.js
+260 silly gunzTarPerm extractEntry .travis.yml
+261 silly gunzTarPerm extractEntry examples/flikr-example-2.js
+262 silly gunzTarPerm extractEntry examples/flikr-example.js
+263 silly gunzTarPerm extractEntry examples/json-path-example.js
+264 silly gunzTarPerm extractEntry examples/readme-snippet-0.js
+265 silly gunzTarPerm extractEntry examples/readme-snippet-1.js
+266 silly gunzTarPerm extractEntry examples/various-json-pointers.js
+267 silly gunzTarPerm extractEntry examples/example-data.json
+268 silly gunzTarPerm extractEntry releases/json-path+json-ptr-0.1.3.min.js
+269 silly gunzTarPerm extractEntry releases/json-path-0.1.3.min.js
+270 silly gunzTarPerm extractEntry test/tests.js
+271 silly gunzTarPerm extractEntry test/tests.html
+272 silly gunzTarPerm extractEntry Gruntfile.js
+273 silly gunzTarPerm extractEntry bin/chit
+274 silly gunzTarPerm extractEntry LICENSE-MIT
+275 silly gunzTarPerm extractEntry lib/json2xml.js
+276 silly gunzTarPerm extractEntry lib/xml2json.js
+277 silly gunzTarPerm extractEntry test/.npmignore
+278 silly gunzTarPerm extractEntry test/coerce-overhead.js
+279 silly gunzTarPerm extractEntry test/test-array-notation.js
+280 silly gunzTarPerm extractEntry test/test-coerce.js
+281 silly gunzTarPerm extractEntry test/test-reorder.js
+282 silly gunzTarPerm extractEntry test/test-space.js
+283 silly gunzTarPerm extractEntry test/test.js
+284 silly gunzTarPerm extractEntry test/fixtures/domain.xml
+285 silly gunzTarPerm extractEntry test/fixtures/array-notation.json
+286 silly gunzTarPerm extractEntry test/fixtures/coerce.json
+287 silly gunzTarPerm extractEntry test/fixtures/coerce.xml
+288 silly gunzTarPerm extractEntry test/fixtures/domain-reversible.json
+289 silly gunzTarPerm extractEntry test/fixtures/domain.json
+290 silly gunzTarPerm extractEntry test/fixtures/array-notation.xml
+291 silly gunzTarPerm extractEntry test/fixtures/large.json
+292 silly gunzTarPerm extractEntry test/fixtures/large.xml
+293 silly gunzTarPerm extractEntry test/fixtures/reorder.json
+294 silly gunzTarPerm extractEntry test/fixtures/reorder.xml
+295 silly gunzTarPerm extractEntry test/fixtures/spacetext.json
+296 silly gunzTarPerm extractEntry test/fixtures/spacetext.xml
+297 silly gunzTarPerm extractEntry test/json2xml_test.js
+298 silly lockFile 5fca9d9a-it-nodule-json-node-modules-chit tar:///home/rob/git/nodule/json/node_modules/chit
+299 silly lockFile 5fca9d9a-it-nodule-json-node-modules-chit tar:///home/rob/git/nodule/json/node_modules/chit
+300 silly lockFile a17865dc-e-rob-npm-chit-0-4-5-package-tgz tar:///home/rob/.npm/chit/0.4.5/package.tgz
+301 silly lockFile a17865dc-e-rob-npm-chit-0-4-5-package-tgz tar:///home/rob/.npm/chit/0.4.5/package.tgz
+302 info preinstall chit@0.4.5
+303 verbose readDependencies using package.json deps
+304 verbose readDependencies using package.json deps
+305 silly lockFile 6bf4db2a-odule-json-node-modules-JSONPath tar:///home/rob/git/nodule/json/node_modules/JSONPath
+306 silly lockFile 6bf4db2a-odule-json-node-modules-JSONPath tar:///home/rob/git/nodule/json/node_modules/JSONPath
+307 verbose cache add [ 'glob@3.x.x', null ]
+308 verbose cache add name=undefined spec="glob@3.x.x" args=["glob@3.x.x",null]
+309 verbose parsed url { protocol: null,
+309 verbose parsed url   slashes: null,
+309 verbose parsed url   auth: null,
+309 verbose parsed url   host: null,
+309 verbose parsed url   port: null,
+309 verbose parsed url   hostname: null,
+309 verbose parsed url   hash: null,
+309 verbose parsed url   search: null,
+309 verbose parsed url   query: null,
+309 verbose parsed url   pathname: 'glob@3.x.x',
+309 verbose parsed url   path: 'glob@3.x.x',
+309 verbose parsed url   href: 'glob@3.x.x' }
+310 verbose cache add name="glob" spec="3.x.x" args=["glob","3.x.x"]
+311 verbose parsed url { protocol: null,
+311 verbose parsed url   slashes: null,
+311 verbose parsed url   auth: null,
+311 verbose parsed url   host: null,
+311 verbose parsed url   port: null,
+311 verbose parsed url   hostname: null,
+311 verbose parsed url   hash: null,
+311 verbose parsed url   search: null,
+311 verbose parsed url   query: null,
+311 verbose parsed url   pathname: '3.x.x',
+311 verbose parsed url   path: '3.x.x',
+311 verbose parsed url   href: '3.x.x' }
+312 verbose addNamed [ 'glob', '3.x.x' ]
+313 verbose addNamed [ null, '>=3.0.0-0 <4.0.0-0' ]
+314 silly lockFile 7c824165-glob-3-x-x glob@3.x.x
+315 verbose lock glob@3.x.x /home/rob/.npm/7c824165-glob-3-x-x.lock
+316 verbose cache add [ 'request@2.x.x', null ]
+317 verbose cache add name=undefined spec="request@2.x.x" args=["request@2.x.x",null]
+318 verbose parsed url { protocol: null,
+318 verbose parsed url   slashes: null,
+318 verbose parsed url   auth: null,
+318 verbose parsed url   host: null,
+318 verbose parsed url   port: null,
+318 verbose parsed url   hostname: null,
+318 verbose parsed url   hash: null,
+318 verbose parsed url   search: null,
+318 verbose parsed url   query: null,
+318 verbose parsed url   pathname: 'request@2.x.x',
+318 verbose parsed url   path: 'request@2.x.x',
+318 verbose parsed url   href: 'request@2.x.x' }
+319 verbose cache add name="request" spec="2.x.x" args=["request","2.x.x"]
+320 verbose parsed url { protocol: null,
+320 verbose parsed url   slashes: null,
+320 verbose parsed url   auth: null,
+320 verbose parsed url   host: null,
+320 verbose parsed url   port: null,
+320 verbose parsed url   hostname: null,
+320 verbose parsed url   hash: null,
+320 verbose parsed url   search: null,
+320 verbose parsed url   query: null,
+320 verbose parsed url   pathname: '2.x.x',
+320 verbose parsed url   path: '2.x.x',
+320 verbose parsed url   href: '2.x.x' }
+321 verbose addNamed [ 'request', '2.x.x' ]
+322 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+323 silly lockFile 9215652f-request-2-x-x request@2.x.x
+324 verbose lock request@2.x.x /home/rob/.npm/9215652f-request-2-x-x.lock
+325 silly lockFile d26de4c0-b-npm-JSONPath-0-9-1-package-tgz tar:///home/rob/.npm/JSONPath/0.9.1/package.tgz
+326 silly lockFile d26de4c0-b-npm-JSONPath-0-9-1-package-tgz tar:///home/rob/.npm/JSONPath/0.9.1/package.tgz
+327 verbose cache add [ 'commander@2.x.x', null ]
+328 verbose cache add name=undefined spec="commander@2.x.x" args=["commander@2.x.x",null]
+329 verbose parsed url { protocol: null,
+329 verbose parsed url   slashes: null,
+329 verbose parsed url   auth: null,
+329 verbose parsed url   host: null,
+329 verbose parsed url   port: null,
+329 verbose parsed url   hostname: null,
+329 verbose parsed url   hash: null,
+329 verbose parsed url   search: null,
+329 verbose parsed url   query: null,
+329 verbose parsed url   pathname: 'commander@2.x.x',
+329 verbose parsed url   path: 'commander@2.x.x',
+329 verbose parsed url   href: 'commander@2.x.x' }
+330 verbose cache add name="commander" spec="2.x.x" args=["commander","2.x.x"]
+331 verbose parsed url { protocol: null,
+331 verbose parsed url   slashes: null,
+331 verbose parsed url   auth: null,
+331 verbose parsed url   host: null,
+331 verbose parsed url   port: null,
+331 verbose parsed url   hostname: null,
+331 verbose parsed url   hash: null,
+331 verbose parsed url   search: null,
+331 verbose parsed url   query: null,
+331 verbose parsed url   pathname: '2.x.x',
+331 verbose parsed url   path: '2.x.x',
+331 verbose parsed url   href: '2.x.x' }
+332 verbose addNamed [ 'commander', '2.x.x' ]
+333 verbose addNamed [ null, '>=2.0.0-0 <3.0.0-0' ]
+334 silly lockFile 2f509020-commander-2-x-x commander@2.x.x
+335 verbose lock commander@2.x.x /home/rob/.npm/2f509020-commander-2-x-x.lock
+336 verbose cache add [ 'json-gate@0.x.x', null ]
+337 verbose cache add name=undefined spec="json-gate@0.x.x" args=["json-gate@0.x.x",null]
+338 verbose parsed url { protocol: null,
+338 verbose parsed url   slashes: null,
+338 verbose parsed url   auth: null,
+338 verbose parsed url   host: null,
+338 verbose parsed url   port: null,
+338 verbose parsed url   hostname: null,
+338 verbose parsed url   hash: null,
+338 verbose parsed url   search: null,
+338 verbose parsed url   query: null,
+338 verbose parsed url   pathname: 'json-gate@0.x.x',
+338 verbose parsed url   path: 'json-gate@0.x.x',
+338 verbose parsed url   href: 'json-gate@0.x.x' }
+339 verbose cache add name="json-gate" spec="0.x.x" args=["json-gate","0.x.x"]
+340 verbose parsed url { protocol: null,
+340 verbose parsed url   slashes: null,
+340 verbose parsed url   auth: null,
+340 verbose parsed url   host: null,
+340 verbose parsed url   port: null,
+340 verbose parsed url   hostname: null,
+340 verbose parsed url   hash: null,
+340 verbose parsed url   search: null,
+340 verbose parsed url   query: null,
+340 verbose parsed url   pathname: '0.x.x',
+340 verbose parsed url   path: '0.x.x',
+340 verbose parsed url   href: '0.x.x' }
+341 verbose addNamed [ 'json-gate', '0.x.x' ]
+342 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+343 silly lockFile 696d05d4-json-gate-0-x-x json-gate@0.x.x
+344 verbose lock json-gate@0.x.x /home/rob/.npm/696d05d4-json-gate-0-x-x.lock
+345 verbose cache add [ 'chix-flow@0.x.x', null ]
+346 verbose cache add name=undefined spec="chix-flow@0.x.x" args=["chix-flow@0.x.x",null]
+347 verbose parsed url { protocol: null,
+347 verbose parsed url   slashes: null,
+347 verbose parsed url   auth: null,
+347 verbose parsed url   host: null,
+347 verbose parsed url   port: null,
+347 verbose parsed url   hostname: null,
+347 verbose parsed url   hash: null,
+347 verbose parsed url   search: null,
+347 verbose parsed url   query: null,
+347 verbose parsed url   pathname: 'chix-flow@0.x.x',
+347 verbose parsed url   path: 'chix-flow@0.x.x',
+347 verbose parsed url   href: 'chix-flow@0.x.x' }
+348 verbose cache add name="chix-flow" spec="0.x.x" args=["chix-flow","0.x.x"]
+349 verbose parsed url { protocol: null,
+349 verbose parsed url   slashes: null,
+349 verbose parsed url   auth: null,
+349 verbose parsed url   host: null,
+349 verbose parsed url   port: null,
+349 verbose parsed url   hostname: null,
+349 verbose parsed url   hash: null,
+349 verbose parsed url   search: null,
+349 verbose parsed url   query: null,
+349 verbose parsed url   pathname: '0.x.x',
+349 verbose parsed url   path: '0.x.x',
+349 verbose parsed url   href: '0.x.x' }
+350 verbose addNamed [ 'chix-flow', '0.x.x' ]
+351 verbose addNamed [ null, '>=0.0.0-0 <1.0.0-0' ]
+352 silly lockFile 9bb83dc8-chix-flow-0-x-x chix-flow@0.x.x
+353 verbose lock chix-flow@0.x.x /home/rob/.npm/9bb83dc8-chix-flow-0-x-x.lock
+354 silly addNameRange { name: 'glob', range: '>=3.0.0-0 <4.0.0-0', hasData: false }
+355 silly addNameRange { name: 'request', range: '>=2.0.0-0 <3.0.0-0', hasData: false }
+356 silly addNameRange { name: 'commander',
+356 silly addNameRange   range: '>=2.0.0-0 <3.0.0-0',
+356 silly addNameRange   hasData: false }
+357 silly addNameRange { name: 'json-gate',
+357 silly addNameRange   range: '>=0.0.0-0 <1.0.0-0',
+357 silly addNameRange   hasData: false }
+358 silly addNameRange { name: 'chix-flow',
+358 silly addNameRange   range: '>=0.0.0-0 <1.0.0-0',
+358 silly addNameRange   hasData: false }
+359 verbose url raw chix-flow
+360 verbose url resolving [ 'https://registry.npmjs.org/', './chix-flow' ]
+361 verbose url resolved https://registry.npmjs.org/chix-flow
+362 info trying registry request attempt 1 at 23:01:55
+363 http GET https://registry.npmjs.org/chix-flow
+364 info preinstall JSONPath@0.9.1
+365 silly lockFile 892c6b7b-odule-json-node-modules-json2xml tar:///home/rob/git/nodule/json/node_modules/json2xml
+366 silly lockFile 892c6b7b-odule-json-node-modules-json2xml tar:///home/rob/git/nodule/json/node_modules/json2xml
+367 verbose url raw glob
+368 verbose url resolving [ 'https://registry.npmjs.org/', './glob' ]
+369 verbose url resolved https://registry.npmjs.org/glob
+370 info trying registry request attempt 1 at 23:01:55
+371 verbose etag "6RA7V6TZW2GEBI2B69KXGLPGE"
+372 http GET https://registry.npmjs.org/glob
+373 verbose readDependencies using package.json deps
+374 silly lockFile c9018b2a-b-npm-json2xml-0-1-1-package-tgz tar:///home/rob/.npm/json2xml/0.1.1/package.tgz
+375 silly lockFile c9018b2a-b-npm-json2xml-0-1-1-package-tgz tar:///home/rob/.npm/json2xml/0.1.1/package.tgz
+376 verbose url raw commander
+377 verbose url resolving [ 'https://registry.npmjs.org/', './commander' ]
+378 verbose url resolved https://registry.npmjs.org/commander
+379 info trying registry request attempt 1 at 23:01:55
+380 verbose etag "B21YKHI71DOALH8ZWJ6PE03LR"
+381 http GET https://registry.npmjs.org/commander
+382 verbose url raw json-gate
+383 verbose url resolving [ 'https://registry.npmjs.org/', './json-gate' ]
+384 verbose url resolved https://registry.npmjs.org/json-gate
+385 info trying registry request attempt 1 at 23:01:55
+386 verbose etag "2VY4M50ARYV0MHSA2ULNSPY60"
+387 http GET https://registry.npmjs.org/json-gate
+388 verbose readDependencies using package.json deps
+389 verbose url raw request
+390 verbose url resolving [ 'https://registry.npmjs.org/', './request' ]
+391 verbose url resolved https://registry.npmjs.org/request
+392 info trying registry request attempt 1 at 23:01:55
+393 verbose etag "9GDSC05M9SV8V3528B1ORG7NK"
+394 http GET https://registry.npmjs.org/request
+395 verbose cache add [ 'underscore@1.3.x', null ]
+396 verbose cache add name=undefined spec="underscore@1.3.x" args=["underscore@1.3.x",null]
+397 verbose parsed url { protocol: null,
+397 verbose parsed url   slashes: null,
+397 verbose parsed url   auth: null,
+397 verbose parsed url   host: null,
+397 verbose parsed url   port: null,
+397 verbose parsed url   hostname: null,
+397 verbose parsed url   hash: null,
+397 verbose parsed url   search: null,
+397 verbose parsed url   query: null,
+397 verbose parsed url   pathname: 'underscore@1.3.x',
+397 verbose parsed url   path: 'underscore@1.3.x',
+397 verbose parsed url   href: 'underscore@1.3.x' }
+398 verbose cache add name="underscore" spec="1.3.x" args=["underscore","1.3.x"]
+399 verbose parsed url { protocol: null,
+399 verbose parsed url   slashes: null,
+399 verbose parsed url   auth: null,
+399 verbose parsed url   host: null,
+399 verbose parsed url   port: null,
+399 verbose parsed url   hostname: null,
+399 verbose parsed url   hash: null,
+399 verbose parsed url   search: null,
+399 verbose parsed url   query: null,
+399 verbose parsed url   pathname: '1.3.x',
+399 verbose parsed url   path: '1.3.x',
+399 verbose parsed url   href: '1.3.x' }
+400 verbose addNamed [ 'underscore', '1.3.x' ]
+401 verbose addNamed [ null, '>=1.3.0-0 <1.4.0-0' ]
+402 silly lockFile bbd761e7-underscore-1-3-x underscore@1.3.x
+403 verbose lock underscore@1.3.x /home/rob/.npm/bbd761e7-underscore-1-3-x.lock
+404 info preinstall json2xml@0.1.1
+405 silly addNameRange { name: 'underscore',
+405 silly addNameRange   range: '>=1.3.0-0 <1.4.0-0',
+405 silly addNameRange   hasData: false }
+406 verbose readDependencies using package.json deps
+407 verbose readDependencies using package.json deps
+408 silly resolved []
+409 verbose about to build /home/rob/git/nodule/json/node_modules/json2xml
+410 info build /home/rob/git/nodule/json/node_modules/json2xml
+411 verbose linkStuff [ false, false, false, '/home/rob/git/nodule/json/node_modules' ]
+412 info linkStuff json2xml@0.1.1
+413 verbose linkBins json2xml@0.1.1
+414 verbose linkMans json2xml@0.1.1
+415 verbose rebuildBundles json2xml@0.1.1
+416 info install json2xml@0.1.1
+417 verbose url raw underscore
+418 verbose url resolving [ 'https://registry.npmjs.org/', './underscore' ]
+419 verbose url resolved https://registry.npmjs.org/underscore
+420 info trying registry request attempt 1 at 23:01:55
+421 verbose etag "4PSYSQZIMZPIZ8KRUFJZ3IS6P"
+422 http GET https://registry.npmjs.org/underscore
+423 info postinstall json2xml@0.1.1
+424 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+425 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+426 silly lockFile fe5a387e-dule-json-node-modules-json-path tar:///home/rob/git/nodule/json/node_modules/json-path
+427 silly lockFile fe5a387e-dule-json-node-modules-json-path tar:///home/rob/git/nodule/json/node_modules/json-path
+428 silly lockFile aa6650c6--npm-json-path-0-1-3-package-tgz tar:///home/rob/.npm/json-path/0.1.3/package.tgz
+429 silly lockFile aa6650c6--npm-json-path-0-1-3-package-tgz tar:///home/rob/.npm/json-path/0.1.3/package.tgz
+430 info preinstall json-path@0.1.3
+431 verbose readDependencies using package.json deps
+432 verbose readDependencies using package.json deps
+433 verbose cache add [ 'json-ptr@~0.1.1', null ]
+434 verbose cache add name=undefined spec="json-ptr@~0.1.1" args=["json-ptr@~0.1.1",null]
+435 verbose parsed url { protocol: null,
+435 verbose parsed url   slashes: null,
+435 verbose parsed url   auth: null,
+435 verbose parsed url   host: null,
+435 verbose parsed url   port: null,
+435 verbose parsed url   hostname: null,
+435 verbose parsed url   hash: null,
+435 verbose parsed url   search: null,
+435 verbose parsed url   query: null,
+435 verbose parsed url   pathname: 'json-ptr@~0.1.1',
+435 verbose parsed url   path: 'json-ptr@~0.1.1',
+435 verbose parsed url   href: 'json-ptr@~0.1.1' }
+436 verbose cache add name="json-ptr" spec="~0.1.1" args=["json-ptr","~0.1.1"]
+437 verbose parsed url { protocol: null,
+437 verbose parsed url   slashes: null,
+437 verbose parsed url   auth: null,
+437 verbose parsed url   host: null,
+437 verbose parsed url   port: null,
+437 verbose parsed url   hostname: null,
+437 verbose parsed url   hash: null,
+437 verbose parsed url   search: null,
+437 verbose parsed url   query: null,
+437 verbose parsed url   pathname: '~0.1.1',
+437 verbose parsed url   path: '~0.1.1',
+437 verbose parsed url   href: '~0.1.1' }
+438 verbose addNamed [ 'json-ptr', '~0.1.1' ]
+439 verbose addNamed [ null, '>=0.1.1-0 <0.2.0-0' ]
+440 silly lockFile 67922207-json-ptr-0-1-1 json-ptr@~0.1.1
+441 verbose lock json-ptr@~0.1.1 /home/rob/.npm/67922207-json-ptr-0-1-1.lock
+442 silly addNameRange { name: 'json-ptr', range: '>=0.1.1-0 <0.2.0-0', hasData: false }
+443 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+444 silly lockFile 13d9b869-odule-json-node-modules-xml2json tar:///home/rob/git/nodule/json/node_modules/xml2json
+445 silly lockFile 13d9b869-odule-json-node-modules-xml2json tar:///home/rob/git/nodule/json/node_modules/xml2json
+446 silly lockFile 09e5cbb7-b-npm-xml2json-0-4-0-package-tgz tar:///home/rob/.npm/xml2json/0.4.0/package.tgz
+447 silly lockFile 09e5cbb7-b-npm-xml2json-0-4-0-package-tgz tar:///home/rob/.npm/xml2json/0.4.0/package.tgz
+448 verbose url raw json-ptr
+449 verbose url resolving [ 'https://registry.npmjs.org/', './json-ptr' ]
+450 verbose url resolved https://registry.npmjs.org/json-ptr
+451 info trying registry request attempt 1 at 23:01:55
+452 verbose etag "9J0SSIX96QMFDZ67YGFIRA1ZT"
+453 http GET https://registry.npmjs.org/json-ptr
+454 info preinstall xml2json@0.4.0
+455 verbose readDependencies using package.json deps
+456 verbose readDependencies using package.json deps
+457 verbose cache add [ 'node-expat@2.1.4', null ]
+458 verbose cache add name=undefined spec="node-expat@2.1.4" args=["node-expat@2.1.4",null]
+459 verbose parsed url { protocol: null,
+459 verbose parsed url   slashes: null,
+459 verbose parsed url   auth: null,
+459 verbose parsed url   host: null,
+459 verbose parsed url   port: null,
+459 verbose parsed url   hostname: null,
+459 verbose parsed url   hash: null,
+459 verbose parsed url   search: null,
+459 verbose parsed url   query: null,
+459 verbose parsed url   pathname: 'node-expat@2.1.4',
+459 verbose parsed url   path: 'node-expat@2.1.4',
+459 verbose parsed url   href: 'node-expat@2.1.4' }
+460 verbose cache add name="node-expat" spec="2.1.4" args=["node-expat","2.1.4"]
+461 verbose parsed url { protocol: null,
+461 verbose parsed url   slashes: null,
+461 verbose parsed url   auth: null,
+461 verbose parsed url   host: null,
+461 verbose parsed url   port: null,
+461 verbose parsed url   hostname: null,
+461 verbose parsed url   hash: null,
+461 verbose parsed url   search: null,
+461 verbose parsed url   query: null,
+461 verbose parsed url   pathname: '2.1.4',
+461 verbose parsed url   path: '2.1.4',
+461 verbose parsed url   href: '2.1.4' }
+462 verbose addNamed [ 'node-expat', '2.1.4' ]
+463 verbose addNamed [ '2.1.4', '2.1.4' ]
+464 silly lockFile d7358e55-node-expat-2-1-4 node-expat@2.1.4
+465 verbose lock node-expat@2.1.4 /home/rob/.npm/d7358e55-node-expat-2-1-4.lock
+466 verbose url raw node-expat/2.1.4
+467 verbose url resolving [ 'https://registry.npmjs.org/', './node-expat/2.1.4' ]
+468 verbose url resolved https://registry.npmjs.org/node-expat/2.1.4
+469 info trying registry request attempt 1 at 23:01:55
+470 verbose etag "9GOMF4GO2QVOIK0LCUWIB07F3"
+471 http GET https://registry.npmjs.org/node-expat/2.1.4
+472 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+473 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+474 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+475 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+476 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+477 info trying registry request attempt 2 at 23:02:05
+478 http GET https://registry.npmjs.org/chix-flow
+479 info trying registry request attempt 2 at 23:02:05
+480 verbose etag "2VY4M50ARYV0MHSA2ULNSPY60"
+481 http GET https://registry.npmjs.org/json-gate
+482 info trying registry request attempt 2 at 23:02:05
+483 verbose etag "4PSYSQZIMZPIZ8KRUFJZ3IS6P"
+484 http GET https://registry.npmjs.org/underscore
+485 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+486 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+487 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+488 info trying registry request attempt 2 at 23:02:05
+489 verbose etag "6RA7V6TZW2GEBI2B69KXGLPGE"
+490 http GET https://registry.npmjs.org/glob
+491 info trying registry request attempt 2 at 23:02:05
+492 verbose etag "9GDSC05M9SV8V3528B1ORG7NK"
+493 http GET https://registry.npmjs.org/request
+494 info trying registry request attempt 2 at 23:02:05
+495 verbose etag "B21YKHI71DOALH8ZWJ6PE03LR"
+496 http GET https://registry.npmjs.org/commander
+497 info trying registry request attempt 2 at 23:02:05
+498 verbose etag "9J0SSIX96QMFDZ67YGFIRA1ZT"
+499 http GET https://registry.npmjs.org/json-ptr
+500 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+501 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+502 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+503 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+504 info trying registry request attempt 2 at 23:02:10
+505 verbose etag "9GOMF4GO2QVOIK0LCUWIB07F3"
+506 http GET https://registry.npmjs.org/node-expat/2.1.4
+507 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+508 info trying registry request attempt 3 at 23:03:05
+509 http GET https://registry.npmjs.org/chix-flow
+510 info trying registry request attempt 3 at 23:03:05
+511 verbose etag "2VY4M50ARYV0MHSA2ULNSPY60"
+512 http GET https://registry.npmjs.org/json-gate
+513 info trying registry request attempt 3 at 23:03:05
+514 verbose etag "4PSYSQZIMZPIZ8KRUFJZ3IS6P"
+515 http GET https://registry.npmjs.org/underscore
+516 silly lockFile 9bb83dc8-chix-flow-0-x-x chix-flow@0.x.x
+517 silly lockFile 9bb83dc8-chix-flow-0-x-x chix-flow@0.x.x
+518 verbose about to build /home/rob/git/nodule/json/node_modules/chit
+519 info /home/rob/git/nodule/json/node_modules/chit unbuild
+520 info preuninstall chit@0.4.5
+521 info uninstall chit@0.4.5
+522 verbose true,/home/rob/git/nodule/json/node_modules,/home/rob/git/nodule/json/node_modules unbuild chit@0.4.5
+523 verbose /home/rob/git/nodule/json/node_modules/.bin,[object Object] binRoot
+524 info postuninstall chit@0.4.5
+525 error Error: SELF_SIGNED_CERT_IN_CHAIN
+525 error     at SecurePair.<anonymous> (tls.js:1356:32)
+525 error     at SecurePair.EventEmitter.emit (events.js:92:17)
+525 error     at SecurePair.maybeInitFinished (tls.js:968:10)
+525 error     at CleartextStream.read [as _read] (tls.js:462:15)
+525 error     at CleartextStream.Readable.read (_stream_readable.js:320:10)
+525 error     at EncryptedStream.write [as _write] (tls.js:366:25)
+525 error     at doWrite (_stream_writable.js:221:10)
+525 error     at writeOrBuffer (_stream_writable.js:211:5)
+525 error     at EncryptedStream.Writable.write (_stream_writable.js:180:11)
+525 error     at write (_stream_readable.js:583:24)
+525 error     at flow (_stream_readable.js:592:7)
+525 error     at Socket.pipeOnReadable (_stream_readable.js:624:5)
+526 error If you need help, you may report this log at:
+526 error     <http://github.com/isaacs/npm/issues>
+526 error or email it to:
+526 error     <npm-@googlegroups.com>
+527 error System Linux 3.2.0-58-lowlatency
+528 error command "/usr/local/bin/node" "/usr/local/bin/npm" "i"
+529 error cwd /home/rob/git/nodule/json
+530 error node -v v0.10.21
+531 error npm -v 1.3.11
+532 verbose exit [ 1, true ]

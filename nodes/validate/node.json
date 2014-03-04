@@ -17,7 +17,7 @@
         "required": true
       },
       "schema":{
-        "type":"Schema",
+        "type":"object",
         "title":"JSON Gate Schema"
       }
     },

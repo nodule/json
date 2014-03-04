@@ -24,7 +24,7 @@
         "title":"Error"
       },
       "out": {
-        "type":"Schema",
+        "type":"object",
         "title":"JSON Schema"
       }
     }

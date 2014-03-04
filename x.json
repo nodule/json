@@ -72,7 +72,7 @@
             "title": "Error"
           },
           "out": {
-            "type": "Schema",
+            "type": "object",
             "title": "JSON Schema"
           }
         }
@@ -87,7 +87,7 @@
       "title": "JSON Schema",
       "ns": "json",
       "name": "createSchema",
-      "fn": "try {\n  output.out = json_gate.createSchema(input.in);\n} catch(e) {\n  output.error = e;\n}\n"
+      "fn": "output.out = json_gate.createSchema(input.in);\n"
     },
     {
       "ports": {
@@ -212,7 +212,7 @@
             "required": true
           },
           "schema": {
-            "type": "Schema",
+            "type": "object",
             "title": "JSON Gate Schema"
           }
         },
@@ -235,7 +235,7 @@
       "async": true,
       "ns": "json",
       "name": "validate",
-      "fn": "on.input.in = function () {\n  try {\n    output({\n      out: input.schema.validate(data)\n    });\n  } catch(err) {\n    output({\n      error: err\n    });\n  }\n};\n"
+      "fn": "on.input.in = function () {\n  output({\n    out: input.schema.validate(data)\n  });\n};\n"
     }
   ],
   "twigs": []

@@ -1,5 +1,12 @@
 on.input.in = function () {
-  output({
-    out: input.schema.validate(data)
-  });
+  try {
+    input.schema.validate(data)
+    output({
+      out: data
+    });
+  } catch(err) {
+    output({
+      error: err
+    });
+  }
 };

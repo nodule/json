@@ -12,7 +12,8 @@
     "JSONPath": "0.x.x",
     "xml2json": "0.x.x",
     "json-path": "0.x.x",
-    "json2xml": "0.1.x"
+    "json2xml": "0.1.x",
+    "json-gate": "0.x.x"
   },
   "devDependencies": {
     "chit": "0.x.x"

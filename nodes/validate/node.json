@@ -1,0 +1,35 @@
+{
+  "name":"validate",
+  "ns":"json",
+  "async": true,
+  "title": "Validate JSON",
+  "description":"Validates JSON agains JSON Schema",
+  "phrases": {
+    "active": "Validating JSON"
+  },
+  "ports":{
+    "input":{
+      "in":{
+        "type":"object",
+        "async": true,
+        "title":"JSON",
+        "format":"json",
+        "required": true
+      },
+      "schema":{
+        "type":"Schema",
+        "title":"JSON Gate Schema"
+      }
+    },
+    "output":{
+      "error": {
+        "type":"object",
+        "title":"Error"
+      },
+      "out": {
+        "type":"object",
+        "title":"The Validated Object"
+      }
+    }
+  }
+}

@@ -10,7 +10,8 @@
     "JSONPath": "0.x.x",
     "xml2json": "0.x.x",
     "json-path": "0.x.x",
-    "json2xml": "psichi/json2xml"
+    "json2xml": "0.1.x",
+    "json-gate": "0.x.x"
   },
   "nodes": [
     {
@@ -47,13 +48,46 @@
         "active": "Parsing JSON string"
       },
       "require": {
-        "json2xml": "psichi/json2xml"
+        "json2xml": "0.1.x"
       },
       "description": "Converts JSON to Simple XML",
       "title": "JSON To XML",
       "ns": "json",
       "name": "2xml",
       "fn": "var obj = {};\nif (input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, {\n  header: input.header\n});\n\n/*\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n*/\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "type": "object",
+            "title": "JSON Schema",
+            "format": "json",
+            "required": true
+          }
+        },
+        "output": {
+          "error": {
+            "type": "object",
+            "title": "Error"
+          },
+          "out": {
+            "type": "Schema",
+            "title": "JSON Schema"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Creating JSON Schema"
+      },
+      "require": {
+        "json-gate": "0.x.x"
+      },
+      "description": "Instantiate a JSON Schema",
+      "title": "JSON Schema",
+      "ns": "json",
+      "name": "createSchema",
+      "fn": "try {\n  output.out = json_gate.createSchema(input.in);\n} catch(e) {\n  output.error = e;\n}\n"
     },
     {
       "ports": {
@@ -132,6 +166,7 @@
           "in": {
             "type": "any",
             "title": "Input Object",
+            "async": true,
             "required": true
           },
           "replacer": {
@@ -156,6 +191,7 @@
       "phrases": {
         "active": "JSON Stringifying Object"
       },
+      "async": true,
       "expose": [
         "JSON"
       ],
@@ -163,7 +199,43 @@
       "title": "JSON Stringify",
       "ns": "json",
       "name": "stringify",
-      "fn": "//output.out = JSON.stringify(input. in , input.replacer, input.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify(data, input.replacer, input.space);\n  });\n\n};\n"
+      "fn": "//output.out = JSON.stringify(input. in , input.replacer, input.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify(data, input.replacer, input.space)\n  });\n\n};\n"
+    },
+    {
+      "ports": {
+        "input": {
+          "in": {
+            "type": "object",
+            "async": true,
+            "title": "JSON",
+            "format": "json",
+            "required": true
+          },
+          "schema": {
+            "type": "Schema",
+            "title": "JSON Gate Schema"
+          }
+        },
+        "output": {
+          "error": {
+            "type": "object",
+            "title": "Error"
+          },
+          "out": {
+            "type": "object",
+            "title": "The Validated Object"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Validating JSON"
+      },
+      "description": "Validates JSON agains JSON Schema",
+      "title": "Validate JSON",
+      "async": true,
+      "ns": "json",
+      "name": "validate",
+      "fn": "on.input.in = function () {\n  try {\n    output({\n      out: input.schema.validate(data)\n    });\n  } catch(err) {\n    output({\n      error: err\n    });\n  }\n};\n"
     }
   ],
   "twigs": []

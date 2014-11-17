@@ -1,32 +1,34 @@
 {
-  "name":"createSchema",
-  "ns":"json",
+  "name": "createSchema",
+  "ns": "json",
   "title": "JSON Schema",
-  "description":"Instantiate a JSON Schema",
-  "require": {
-    "json-gate": "0.x.x"
-  },
+  "description": "Instantiate a JSON Schema",
   "phrases": {
     "active": "Creating JSON Schema"
   },
-  "ports":{
-    "input":{
-      "in":{
-        "type":"object",
-        "title":"JSON Schema",
-        "format":"json",
+  "ports": {
+    "input": {
+      "in": {
+        "type": "object",
+        "title": "JSON Schema",
+        "format": "json",
         "required": true
       }
     },
-    "output":{
+    "output": {
       "error": {
-        "type":"object",
-        "title":"Error"
+        "type": "object",
+        "title": "Error"
       },
       "out": {
-        "type":"object",
-        "title":"JSON Schema"
+        "type": "object",
+        "title": "JSON Schema"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "json-gate": "0.x.x"
     }
   }
 }

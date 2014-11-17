@@ -1,41 +1,43 @@
 {
-  "name":"2xml",
-  "ns":"json",
+  "name": "2xml",
+  "ns": "json",
   "title": "JSON To XML",
-  "description":"Converts JSON to Simple XML",
-  "require": {
-    "json2xml": "0.1.x"
-  },
+  "description": "Converts JSON to Simple XML",
   "phrases": {
     "active": "Parsing JSON string"
   },
-  "ports":{
-    "input":{
-      "json":{
-        "type":"object",
-        "title":"JSON",
+  "ports": {
+    "input": {
+      "json": {
+        "type": "object",
+        "title": "JSON",
         "required": true
       },
-      "root":{
-        "type":"string",
-        "title":"Root Element",
+      "root": {
+        "type": "string",
+        "title": "Root Element",
         "default": ""
       },
-      "header":{
-        "type":"boolean",
-        "title":"Add Header?",
+      "header": {
+        "type": "boolean",
+        "title": "Add Header?",
         "default": true
       }
     },
-    "output":{
+    "output": {
       "out": {
-        "type":"object",
-        "title":"The Javascript Object"
+        "type": "object",
+        "title": "The Javascript Object"
       },
       "error": {
-        "type":"object",
-        "title":"Error"
+        "type": "object",
+        "title": "Error"
       }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "json2xml": "0.1.x"
     }
   }
 }

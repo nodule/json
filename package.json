@@ -1,5 +1,5 @@
 {
-  "name": "nodule-json",
+  "name": "chix-json",
   "description": "JSON for Chiχ",
   "author": "Rob Halff <rob.halff@gmail.com>",
   "version": "0.0.3",
@@ -21,7 +21,6 @@
   "engines": {
     "node": ">=0.6.0"
   },
-  "main": "x",
   "scripts": {
     "test": "chit"
   },

@@ -13,7 +13,18 @@ module.exports = {
         type: "object",
         title: "Input JSON",
         description: "Any JSON document",
-        required: true
+        required: true,
+        fn: function __JSON__(data, x, source, state, input, output, json_path) {
+          var r = function() {
+            output({
+              matches: json_path.resolve(data, input.path)
+            });
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       path: {
         type: "string",
@@ -35,24 +46,5 @@ module.exports = {
       "json-path": require('json-path')
     }
   },
-  fn: function path(input, output, state, done, cb, on, json_path) {
-    var r = function() {
-      /* output = { matches: json_path.resolve(input.json, input.path) } */
-      on.input.json = function() {
-        output({
-          matches: json_path.resolve(data, state.path)
-        });
-      };
-
-      on.input.path = function() {
-        state.path = data;
-      };
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
-  }
+  state: {}
 }

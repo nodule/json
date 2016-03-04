@@ -164,7 +164,7 @@
       "title": "JSON Path",
       "ns": "json",
       "name": "path",
-      "fn": "/* output = { matches: json_path.resolve(input.json, input.path) } */\non.input.json = function () {\n  output({\n    matches: json_path.resolve(data, state.path)\n  });\n};\n\non.input.path = function () {\n  state.path = data;\n};\n"
+      "fn": "on.input.json = function () {\n  output({\n    matches: json_path.resolve(data, input.path)\n  });\n};\n\n"
     },
     {
       "ports": {

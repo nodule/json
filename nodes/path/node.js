@@ -1,6 +1,6 @@
 on.input.json = function () {
   output({
-    matches: json_path.resolve(data, input.path)
+    matches: json_path.resolve(input.json, input.path)
   });
 };
 

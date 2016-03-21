@@ -11,24 +11,24 @@ output.out = json2xml(obj, {
 
 /*
 on.input.root = function() {
-  state.root = data;
+  state.root = input.root;
 };
 
 on.input.header = function() {
-  state.header = data;
+  state.header = input.header;
 };
 
 on.input.json = function() {
 
   var obj = {};
   if(state.root) {
-    obj[state.root] = data;
+    obj[state.root] = input.json;
   } else {
-    obj = data;
+    obj = input.json;
   }
 
   output({
-    out: json2xml(data, { header: state.header })
+    out: json2xml(input.json, { header: state.header })
   });
 
 };

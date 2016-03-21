@@ -2,7 +2,7 @@
 on.input.in = function() {
 
   output({
-    out: JSON.stringify(data, input.replacer, input.space)
+    out: JSON.stringify(input.in, input.replacer, input.space)
   });
 
 };

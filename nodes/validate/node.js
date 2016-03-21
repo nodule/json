@@ -1,8 +1,8 @@
 on.input.in = function () {
   try {
-    input.schema.validate(data)
+    input.schema.validate(input.in)
     output({
-      out: data
+      out: input.in
     });
   } catch(err) {
     output({

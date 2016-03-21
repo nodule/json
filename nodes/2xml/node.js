@@ -5,9 +5,7 @@ if ($.root) {
   obj = $.json;
 }
 
-output.out = json2xml(obj, {
-  header: $.header
-});
+output.out = $.create(json2xml(obj, {header: $.header}));
 
 /*
 on.input.root = function() {

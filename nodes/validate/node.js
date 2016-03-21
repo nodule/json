@@ -1,8 +1,8 @@
 on.input.in = function () {
   try {
-    input.schema.validate(input.in)
+    $.schema.validate($.in)
     output({
-      out: input.in
+      out: $.in
     });
   } catch(err) {
     output({

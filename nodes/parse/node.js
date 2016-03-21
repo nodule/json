@@ -1,11 +1,11 @@
-/* output.out = JSON.parse(input.in, input.reviver); */
+/* output.out = JSON.parse($.in, $.reviver); */
 
 on.input.in = function () {
   output({
-    out: JSON.parse(input.in, state.reviver)
+    out: JSON.parse($.in, state.reviver)
   });
 };
 
 on.input.reviver = function () {
-  state.reviver = input.reviver;
+  state.reviver = $.reviver;
 };

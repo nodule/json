@@ -1,1 +1,1 @@
-output.out = json_gate.createSchema(input.in);
+output.out = json_gate.createSchema($.in);

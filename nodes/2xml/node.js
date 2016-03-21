@@ -1,34 +1,34 @@
 var obj = {};
-if (input.root) {
-  obj[input.root] = input.json;
+if ($.root) {
+  obj[$.root] = $.json;
 } else {
-  obj = input.json;
+  obj = $.json;
 }
 
 output.out = json2xml(obj, {
-  header: input.header
+  header: $.header
 });
 
 /*
 on.input.root = function() {
-  state.root = input.root;
+  state.root = $.root;
 };
 
 on.input.header = function() {
-  state.header = input.header;
+  state.header = $.header;
 };
 
 on.input.json = function() {
 
   var obj = {};
   if(state.root) {
-    obj[state.root] = input.json;
+    obj[state.root] = $.json;
   } else {
-    obj = input.json;
+    obj = $.json;
   }
 
   output({
-    out: json2xml(input.json, { header: state.header })
+    out: json2xml($.json, { header: state.header })
   });
 
 };

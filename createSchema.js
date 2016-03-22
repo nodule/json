@@ -31,9 +31,9 @@ module.exports = {
       "json-gate": require('json-gate')
     }
   },
-  fn: function createSchema(input, output, state, done, cb, on, json_gate) {
+  fn: function createSchema(input, $, output, state, done, cb, on, json_gate) {
     var r = function() {
-      output.out = json_gate.createSchema(input.in);
+      output.out = $.write('in', json_gate.createSchema($.in));
     }.call(this);
     return {
       output: output,

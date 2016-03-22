@@ -35,13 +35,13 @@ module.exports = {
       }
     }
   },
-  fn: function stringify(input, output, state, done, cb, on, JSON) {
+  fn: function stringify(input, $, output, state, done, cb, on, JSON) {
     var r = function() {
-      //output.out = JSON.stringify(input. in , input.replacer, input.space);
+      //output.out = JSON.stringify($. in , $.replacer, $.space);
       on.input.in = function() {
 
         output({
-          out: JSON.stringify(data, input.replacer, input.space)
+          out: JSON.stringify($.in, $.replacer, $.space)
         });
 
       };

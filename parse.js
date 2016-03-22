@@ -28,18 +28,18 @@ module.exports = {
       }
     }
   },
-  fn: function parse(input, output, state, done, cb, on, JSON) {
+  fn: function parse(input, $, output, state, done, cb, on, JSON) {
     var r = function() {
-      /* output.out = JSON.parse(input.in, input.reviver); */
+      /* output.out = JSON.parse($.in, $.reviver); */
 
       on.input.in = function() {
         output({
-          out: JSON.parse(data, state.reviver)
+          out: $.write('in', JSON.parse($.in, state.reviver))
         });
       };
 
       on.input.reviver = function() {
-        state.reviver = data;
+        state.reviver = $.reviver;
       };
     }.call(this);
     return {

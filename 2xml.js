@@ -40,39 +40,39 @@ module.exports = {
       json2xml: require('json2xml')
     }
   },
-  fn: function _2xml(input, output, state, done, cb, on, json2xml) {
+  fn: function _2xml(input, $, output, state, done, cb, on, json2xml) {
     var r = function() {
       var obj = {};
-      if (input.root) {
-        obj[input.root] = input.json;
+      if ($.root) {
+        obj[$.root] = $.json;
       } else {
-        obj = input.json;
+        obj = $.json;
       }
 
-      output.out = json2xml(obj, {
-        header: input.header
-      });
+      output.out = $.create(json2xml(obj, {
+        header: $.header
+      }));
 
       /*
       on.input.root = function() {
-        state.root = data;
+        state.root = $.root;
       };
 
       on.input.header = function() {
-        state.header = data;
+        state.header = $.header;
       };
 
       on.input.json = function() {
 
         var obj = {};
         if(state.root) {
-          obj[state.root] = data;
+          obj[state.root] = $.json;
         } else {
-          obj = data;
+          obj = $.json;
         }
 
         output({
-          out: json2xml(data, { header: state.header })
+          out: json2xml($.json, { header: state.header })
         });
 
       };

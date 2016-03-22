@@ -17,7 +17,7 @@ module.exports = {
         fn: function __JSON__(data, x, source, state, input, output, json_path) {
           var r = function() {
             output({
-              matches: json_path.resolve(data, input.path)
+              matches: $.create(json_path.resolve($.json, $.path))
             });
           }.call(this);
           return {

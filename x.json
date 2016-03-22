@@ -56,7 +56,7 @@
       "title": "JSON To XML",
       "ns": "json",
       "name": "2xml",
-      "fn": "var obj = {};\nif (input.root) {\n  obj[input.root] = input.json;\n} else {\n  obj = input.json;\n}\n\noutput.out = json2xml(obj, {\n  header: input.header\n});\n\n/*\non.input.root = function() {\n  state.root = data;\n};\n\non.input.header = function() {\n  state.header = data;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = data;\n  } else {\n    obj = data;\n  }\n\n  output({\n    out: json2xml(data, { header: state.header })\n  });\n\n};\n*/\n"
+      "fn": "var obj = {};\nif ($.root) {\n  obj[$.root] = $.json;\n} else {\n  obj = $.json;\n}\n\noutput.out = $.create(json2xml(obj, {header: $.header}));\n\n/*\non.input.root = function() {\n  state.root = $.root;\n};\n\non.input.header = function() {\n  state.header = $.header;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = $.json;\n  } else {\n    obj = $.json;\n  }\n\n  output({\n    out: json2xml($.json, { header: state.header })\n  });\n\n};\n*/\n"
     },
     {
       "dependencies": {
@@ -91,7 +91,7 @@
       "title": "JSON Schema",
       "ns": "json",
       "name": "createSchema",
-      "fn": "output.out = json_gate.createSchema(input.in);\n"
+      "fn": "output.out = $.write('in', json_gate.createSchema($.in));\n"
     },
     {
       "ports": {
@@ -125,7 +125,7 @@
       "title": "JSON Parse",
       "ns": "json",
       "name": "parse",
-      "fn": "/* output.out = JSON.parse(input.in, input.reviver); */\n\non.input. in = function () {\n  output({\n    out: JSON.parse(data, state.reviver)\n  });\n};\n\non.input.reviver = function () {\n  state.reviver = data;\n};\n"
+      "fn": "/* output.out = JSON.parse($.in, $.reviver); */\n\non.input.in = function () {\n  output({out: $.write('in', JSON.parse($.in, state.reviver))});\n};\n\non.input.reviver = function () {\n  state.reviver = $.reviver;\n};\n"
     },
     {
       "dependencies": {
@@ -164,7 +164,7 @@
       "title": "JSON Path",
       "ns": "json",
       "name": "path",
-      "fn": "on.input.json = function () {\n  output({\n    matches: json_path.resolve(data, input.path)\n  });\n};\n\n"
+      "fn": "on.input.json = function () {\n  output({\n    matches: $.create(json_path.resolve($.json, $.path))\n  });\n};\n\n"
     },
     {
       "ports": {
@@ -205,7 +205,7 @@
       "title": "JSON Stringify",
       "ns": "json",
       "name": "stringify",
-      "fn": "//output.out = JSON.stringify(input. in , input.replacer, input.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify(data, input.replacer, input.space)\n  });\n\n};\n"
+      "fn": "//output.out = JSON.stringify($. in , $.replacer, $.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify($.in, $.replacer, $.space)\n  });\n\n};\n"
     },
     {
       "ports": {
@@ -241,7 +241,7 @@
       "async": true,
       "ns": "json",
       "name": "validate",
-      "fn": "on.input.in = function () {\n  try {\n    input.schema.validate(data)\n    output({\n      out: data\n    });\n  } catch(err) {\n    output({\n      error: err\n    });\n  }\n};\n"
+      "fn": "on.input.in = function () {\n  try {\n    $.schema.validate($.in)\n    output({out: $.get('in')});\n  } catch(err) {\n    output({ error: $.create(err) });\n  }\n};\n"
     }
   ],
   "twigs": []

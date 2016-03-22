@@ -18,13 +18,13 @@ module.exports = {
         fn: function __IN__(data, x, source, state, input, output) {
           var r = function() {
             try {
-              input.schema.validate(data)
+              $.schema.validate($.in)
               output({
-                out: data
+                out: $.get('in')
               });
             } catch (err) {
               output({
-                error: err
+                error: $.create(err)
               });
             }
           }.call(this);

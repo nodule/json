@@ -14,7 +14,7 @@ module.exports = {
         title: "Input JSON",
         description: "Any JSON document",
         required: true,
-        fn: function __JSON__(data, x, source, state, input, output, json_path) {
+        fn: function __JSON__(data, source, state, input, $, output, json_path) {
           var r = function() {
             output({
               matches: $.create(json_path.resolve($.json, $.path))

@@ -1,5 +1,5 @@
 {
-  "name": "2xml",
+  "name": "toxml",
   "ns": "json",
   "title": "JSON To XML",
   "description": "Converts JSON to Simple XML",

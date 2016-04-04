@@ -1,5 +1,5 @@
 module.exports = {
-  name: "2xml",
+  name: "toxml",
   ns: "json",
   title: "JSON To XML",
   description: "Converts JSON to Simple XML",
@@ -40,7 +40,7 @@ module.exports = {
       json2xml: require('json2xml')
     }
   },
-  fn: function _2xml(input, $, output, state, done, cb, on, json2xml) {
+  fn: function toxml(input, $, output, state, done, cb, on, json2xml) {
     var r = function() {
       var obj = {};
       if ($.root) {

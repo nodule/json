@@ -17,50 +17,6 @@
     {
       "dependencies": {
         "npm": {
-          "json2xml": "0.1.x"
-        }
-      },
-      "ports": {
-        "input": {
-          "json": {
-            "type": "object",
-            "title": "JSON",
-            "required": true
-          },
-          "root": {
-            "type": "string",
-            "title": "Root Element",
-            "default": ""
-          },
-          "header": {
-            "type": "boolean",
-            "title": "Add Header?",
-            "default": true
-          }
-        },
-        "output": {
-          "out": {
-            "type": "object",
-            "title": "The Javascript Object"
-          },
-          "error": {
-            "type": "object",
-            "title": "Error"
-          }
-        }
-      },
-      "phrases": {
-        "active": "Parsing JSON string"
-      },
-      "description": "Converts JSON to Simple XML",
-      "title": "JSON To XML",
-      "ns": "json",
-      "name": "2xml",
-      "fn": "var obj = {};\nif ($.root) {\n  obj[$.root] = $.json;\n} else {\n  obj = $.json;\n}\n\noutput.out = $.create(json2xml(obj, {header: $.header}));\n\n/*\non.input.root = function() {\n  state.root = $.root;\n};\n\non.input.header = function() {\n  state.header = $.header;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = $.json;\n  } else {\n    obj = $.json;\n  }\n\n  output({\n    out: json2xml($.json, { header: state.header })\n  });\n\n};\n*/\n"
-    },
-    {
-      "dependencies": {
-        "npm": {
           "json-gate": "0.x.x"
         }
       },
@@ -206,6 +162,50 @@
       "ns": "json",
       "name": "stringify",
       "fn": "//output.out = JSON.stringify($. in , $.replacer, $.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify($.in, $.replacer, $.space)\n  });\n\n};\n"
+    },
+    {
+      "dependencies": {
+        "npm": {
+          "json2xml": "0.1.x"
+        }
+      },
+      "ports": {
+        "input": {
+          "json": {
+            "type": "object",
+            "title": "JSON",
+            "required": true
+          },
+          "root": {
+            "type": "string",
+            "title": "Root Element",
+            "default": ""
+          },
+          "header": {
+            "type": "boolean",
+            "title": "Add Header?",
+            "default": true
+          }
+        },
+        "output": {
+          "out": {
+            "type": "object",
+            "title": "The Javascript Object"
+          },
+          "error": {
+            "type": "object",
+            "title": "Error"
+          }
+        }
+      },
+      "phrases": {
+        "active": "Parsing JSON string"
+      },
+      "description": "Converts JSON to Simple XML",
+      "title": "JSON To XML",
+      "ns": "json",
+      "name": "toxml",
+      "fn": "var obj = {};\nif ($.root) {\n  obj[$.root] = $.json;\n} else {\n  obj = $.json;\n}\n\noutput.out = $.create(json2xml(obj, {header: $.header}));\n\n/*\non.input.root = function() {\n  state.root = $.root;\n};\n\non.input.header = function() {\n  state.header = $.header;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = $.json;\n  } else {\n    obj = $.json;\n  }\n\n  output({\n    out: json2xml($.json, { header: state.header })\n  });\n\n};\n*/\n"
     },
     {
       "ports": {

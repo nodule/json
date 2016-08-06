@@ -1,6 +1,6 @@
-on.input.json = function () {
+on.input.in = function () {
   output({
-    matches: $.create(json_path.resolve($.json, $.path))
+    out: $.create(json_path.resolve($.in, $.path))
   });
 };
 

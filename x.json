@@ -95,7 +95,7 @@
       },
       "ports": {
         "input": {
-          "json": {
+          "in": {
             "type": "object",
             "title": "Input JSON",
             "description": "Any JSON document",
@@ -109,7 +109,7 @@
           }
         },
         "output": {
-          "matches": {
+          "out": {
             "type": "array",
             "title": "Selection Output",
             "description": ""
@@ -121,7 +121,7 @@
           "json-path": "0.x.x"
         }
       },
-      "fn": "on.input.json = function () {\n  output({\n    matches: $.create(json_path.resolve($.json, $.path))\n  });\n};\n\n"
+      "fn": "on.input.in = function () {\n  output({\n    out: $.create(json_path.resolve($.in, $.path))\n  });\n};\n\n"
     },
     {
       "name": "query",

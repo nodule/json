@@ -9,7 +9,7 @@
   },
   "ports": {
     "input": {
-      "json": {
+      "in": {
         "type": "object",
         "title": "Input JSON",
         "description": "Any JSON document",
@@ -23,7 +23,7 @@
       }
     },
     "output": {
-      "matches": {
+      "out": {
         "type": "array",
         "title": "Selection Output",
         "description": ""

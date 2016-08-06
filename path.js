@@ -9,15 +9,15 @@ module.exports = {
   },
   ports: {
     input: {
-      json: {
+      "in": {
         type: "object",
         title: "Input JSON",
         description: "Any JSON document",
         required: true,
-        fn: function __JSON__(data, source, state, input, $, output, json_path) {
+        fn: function __IN__(data, source, state, input, $, output, json_path) {
           var r = function() {
             output({
-              matches: $.create(json_path.resolve($.json, $.path))
+              out: $.create(json_path.resolve($.in, $.path))
             });
           }.call(this);
           return {
@@ -34,7 +34,7 @@ module.exports = {
       }
     },
     output: {
-      matches: {
+      out: {
         type: "array",
         title: "Selection Output",
         description: ""

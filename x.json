@@ -8,17 +8,20 @@
   },
   "dependencies": {
     "JSONPath": "0.x.x",
-    "xml2json": "0.x.x",
+    "json-gate": "0.x.x",
     "json-path": "0.x.x",
+    "json-query": "^2.1.1",
     "json2xml": "0.1.x",
-    "json-gate": "0.x.x"
+    "xml2json": "0.x.x"
   },
   "nodes": [
     {
-      "dependencies": {
-        "npm": {
-          "json-gate": "0.x.x"
-        }
+      "name": "createSchema",
+      "ns": "json",
+      "title": "JSON Schema",
+      "description": "Instantiate a JSON Schema",
+      "phrases": {
+        "active": "Creating JSON Schema"
       },
       "ports": {
         "input": {
@@ -40,16 +43,25 @@
           }
         }
       },
-      "phrases": {
-        "active": "Creating JSON Schema"
+      "dependencies": {
+        "npm": {
+          "json-gate": "0.x.x"
+        }
       },
-      "description": "Instantiate a JSON Schema",
-      "title": "JSON Schema",
-      "ns": "json",
-      "name": "createSchema",
       "fn": "output.out = $.write('in', json_gate.createSchema($.in));\n"
     },
     {
+      "name": "parse",
+      "ns": "json",
+      "title": "JSON Parse",
+      "description": "Parses a string into a javascript object",
+      "expose": [
+        "JSON"
+      ],
+      "async": true,
+      "phrases": {
+        "active": "Parsing JSON string"
+      },
       "ports": {
         "input": {
           "in": {
@@ -70,24 +82,16 @@
           }
         }
       },
-      "phrases": {
-        "active": "Parsing JSON string"
-      },
-      "async": true,
-      "expose": [
-        "JSON"
-      ],
-      "description": "Parses a string into a javascript object",
-      "title": "JSON Parse",
-      "ns": "json",
-      "name": "parse",
       "fn": "/* output.out = JSON.parse($.in, $.reviver); */\n\non.input.in = function () {\n  output({out: $.write('in', JSON.parse($.in, state.reviver))});\n};\n\non.input.reviver = function () {\n  state.reviver = $.reviver;\n};\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "json-path": "0.x.x"
-        }
+      "name": "path",
+      "ns": "json",
+      "title": "JSON Path",
+      "description": "JSON-Path takes a specially formatted path statement and applies it to an object graph in order to select results. The results are returned as an array of data that matches the path.",
+      "async": true,
+      "phrases": {
+        "active": "Performing JSON Path"
       },
       "ports": {
         "input": {
@@ -112,17 +116,60 @@
           }
         }
       },
-      "phrases": {
-        "active": "Performing JSON Path"
+      "dependencies": {
+        "npm": {
+          "json-path": "0.x.x"
+        }
       },
-      "async": true,
-      "description": "JSON-Path takes a specially formatted path statement and applies it to an object graph in order to select results. The results are returned as an array of data that matches the path.",
-      "title": "JSON Path",
-      "ns": "json",
-      "name": "path",
       "fn": "on.input.json = function () {\n  output({\n    matches: $.create(json_path.resolve($.json, $.path))\n  });\n};\n\n"
     },
     {
+      "name": "query",
+      "ns": "json",
+      "title": "JSON Query",
+      "description": "Retrieves values from JSON objects",
+      "async": true,
+      "phrases": {
+        "active": "Querying JSON"
+      },
+      "ports": {
+        "input": {
+          "in": {
+            "type": "object",
+            "title": "JSON",
+            "required": true
+          },
+          "query": {
+            "type": "string",
+            "title": "Query"
+          }
+        },
+        "output": {
+          "out": {
+            "type": "object",
+            "title": "Object"
+          }
+        }
+      },
+      "dependencies": {
+        "npm": {
+          "json-query": "latest"
+        }
+      },
+      "fn": "on.input.in = function () {\n  output({\n    out: $.write('in', json_query($.query, {data: $.in}).value)\n  });\n};\n"
+    },
+    {
+      "name": "stringify",
+      "ns": "json",
+      "title": "JSON Stringify",
+      "description": "Stringify a javascript object",
+      "expose": [
+        "JSON"
+      ],
+      "async": true,
+      "phrases": {
+        "active": "JSON Stringifying Object"
+      },
       "ports": {
         "input": {
           "in": {
@@ -150,24 +197,15 @@
           }
         }
       },
-      "phrases": {
-        "active": "JSON Stringifying Object"
-      },
-      "async": true,
-      "expose": [
-        "JSON"
-      ],
-      "description": "Stringify a javascript object",
-      "title": "JSON Stringify",
-      "ns": "json",
-      "name": "stringify",
       "fn": "//output.out = JSON.stringify($. in , $.replacer, $.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify($.in, $.replacer, $.space)\n  });\n\n};\n"
     },
     {
-      "dependencies": {
-        "npm": {
-          "json2xml": "0.1.x"
-        }
+      "name": "toxml",
+      "ns": "json",
+      "title": "JSON To XML",
+      "description": "Converts JSON to Simple XML",
+      "phrases": {
+        "active": "Parsing JSON string"
       },
       "ports": {
         "input": {
@@ -198,16 +236,22 @@
           }
         }
       },
-      "phrases": {
-        "active": "Parsing JSON string"
+      "dependencies": {
+        "npm": {
+          "json2xml": "0.1.x"
+        }
       },
-      "description": "Converts JSON to Simple XML",
-      "title": "JSON To XML",
-      "ns": "json",
-      "name": "toxml",
       "fn": "var obj = {};\nif ($.root) {\n  obj[$.root] = $.json;\n} else {\n  obj = $.json;\n}\n\noutput.out = $.create(json2xml(obj, {header: $.header}));\n\n/*\non.input.root = function() {\n  state.root = $.root;\n};\n\non.input.header = function() {\n  state.header = $.header;\n};\n\non.input.json = function() {\n\n  var obj = {};\n  if(state.root) {\n    obj[state.root] = $.json;\n  } else {\n    obj = $.json;\n  }\n\n  output({\n    out: json2xml($.json, { header: state.header })\n  });\n\n};\n*/\n"
     },
     {
+      "name": "validate",
+      "ns": "json",
+      "async": true,
+      "title": "Validate JSON",
+      "description": "Validates JSON agains JSON Schema",
+      "phrases": {
+        "active": "Validating JSON"
+      },
       "ports": {
         "input": {
           "in": {
@@ -233,16 +277,7 @@
           }
         }
       },
-      "phrases": {
-        "active": "Validating JSON"
-      },
-      "description": "Validates JSON agains JSON Schema",
-      "title": "Validate JSON",
-      "async": true,
-      "ns": "json",
-      "name": "validate",
       "fn": "on.input.in = function () {\n  try {\n    $.schema.validate($.in)\n    output({out: $.get('in')});\n  } catch(err) {\n    output({ error: $.create(err) });\n  }\n};\n"
     }
-  ],
-  "twigs": []
+  ]
 }

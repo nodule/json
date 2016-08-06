@@ -1,0 +1,34 @@
+{
+  "name": "query",
+  "ns": "json",
+  "title": "JSON Query",
+  "description": "Retrieves values from JSON objects",
+  "async": true,
+  "phrases": {
+    "active": "Querying JSON"
+  },
+  "ports": {
+    "input": {
+      "in": {
+        "type": "object",
+        "title": "JSON",
+        "required": true
+      },
+      "query": {
+        "type": "string",
+        "title": "Query"
+      }
+    },
+    "output": {
+      "out": {
+        "type": "object",
+        "title": "Object"
+      }
+    }
+  },
+  "dependencies": {
+    "npm": {
+      "json-query": "latest"
+    }
+  }
+}

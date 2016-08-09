@@ -5,5 +5,6 @@ module.exports = {
   query: require('./query'),
   stringify: require('./stringify'),
   toxml: require('./toxml'),
-  validate: require('./validate')
+  validate: require('./validate'),
+  tpath: require('./tpath')
 }

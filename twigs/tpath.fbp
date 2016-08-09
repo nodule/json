@@ -1,0 +1,13 @@
+title: JSON Path Template
+description: JSON Path using a templated path
+
+Template(template/string)
+JSONPath(json/path)
+
+-> template Template
+->  in:vars Template
+->       in JSONPath
+
+Template out -> path JSONPath
+
+<- out JSONPath

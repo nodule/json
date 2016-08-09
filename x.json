@@ -7,11 +7,11 @@
     "url": "https://github.com/nodule/json.git"
   },
   "dependencies": {
-    "JSONPath": "0.x.x",
+    "defiant": "github:hbi99/defiant.js",
     "json-gate": "0.x.x",
-    "json-path": "0.x.x",
     "json-query": "^2.1.1",
     "json2xml": "0.1.x",
+    "jsonpath-plus": "^0.x.x",
     "xml2json": "0.x.x"
   },
   "nodes": [
@@ -118,10 +118,10 @@
       },
       "dependencies": {
         "npm": {
-          "json-path": "0.x.x"
+          "jsonpath-plus": "latest"
         }
       },
-      "fn": "on.input.in = function () {\n  output({\n    out: $.create(json_path.resolve($.in, $.path))\n  });\n};\n\n"
+      "fn": "on.input.in = function () {\n  output({\n    out: $.create(json_path_plus({\n      json: $.in,\n      path: $.path\n    }))\n  });\n};\n\n"
     },
     {
       "name": "query",

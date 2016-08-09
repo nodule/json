@@ -32,7 +32,7 @@
   },
   "dependencies": {
     "npm": {
-      "json-path": "0.x.x"
+      "jsonpath-plus": "latest"
     }
   }
 }

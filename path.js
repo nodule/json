@@ -14,10 +14,13 @@ module.exports = {
         title: "Input JSON",
         description: "Any JSON document",
         required: true,
-        fn: function __IN__(data, source, state, input, $, output, json_path) {
+        fn: function __IN__(data, source, state, input, $, output, jsonpath_plus) {
           var r = function() {
             output({
-              out: $.create(json_path.resolve($.in, $.path))
+              out: $.create(json_path_plus({
+                json: $.in,
+                path: $.path
+              }))
             });
           }.call(this);
           return {
@@ -43,7 +46,7 @@ module.exports = {
   },
   dependencies: {
     npm: {
-      "json-path": require('json-path')
+      "jsonpath-plus": require('jsonpath-plus')
     }
   },
   state: {}

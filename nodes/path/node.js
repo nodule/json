@@ -1,6 +1,6 @@
 on.input.in = function () {
   output({
-    out: $.create(json_path_plus({
+    out: $.create(jsonpath_plus({
       json: $.in,
       path: $.path
     }))

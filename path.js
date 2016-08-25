@@ -17,7 +17,7 @@ module.exports = {
         fn: function __IN__(data, source, state, input, $, output, jsonpath_plus) {
           var r = function() {
             output({
-              out: $.create(json_path_plus({
+              out: $.create(jsonpath_plus({
                 json: $.in,
                 path: $.path
               }))

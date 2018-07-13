@@ -1,8 +1,5 @@
-//output.out = JSON.stringify($. in , $.replacer, $.space);
 on.input.in = function() {
-
   output({
-    out: JSON.stringify($.in, $.replacer, $.space)
+    out: $.write('in', JSON.stringify($.in, $.replacer, $.space))
   });
-
 };

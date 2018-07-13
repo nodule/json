@@ -121,7 +121,7 @@
           "jsonpath-plus": "latest"
         }
       },
-      "fn": "on.input.in = function () {\n  output({\n    out: $.create(jsonpath_plus({\n      json: $.in,\n      path: $.path\n    }))\n  });\n};\n\n"
+      "fn": "on.input.in = function () {\n  output({\n    out: $.write('in', jsonpath_plus({\n      json: $.in,\n      path: $.path\n    }))\n  });\n};\n\n"
     },
     {
       "name": "query",
@@ -197,7 +197,7 @@
           }
         }
       },
-      "fn": "//output.out = JSON.stringify($. in , $.replacer, $.space);\non.input.in = function() {\n\n  output({\n    out: JSON.stringify($.in, $.replacer, $.space)\n  });\n\n};\n"
+      "fn": "on.input.in = function() {\n  output({\n    out: $.write('in', JSON.stringify($.in, $.replacer, $.space))\n  });\n};\n"
     },
     {
       "name": "toxml",
@@ -340,7 +340,7 @@
       },
       "providers": {
         "@": {
-          "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+          "url": "https://api.chix.io/v1/nodes/{ns}/{name}"
         }
       },
       "ns": "json",

@@ -44,5 +44,6 @@ module.exports = {
       "json-query": require('json-query')
     }
   },
-  state: {}
+  state: {},
+  on: {}
 }

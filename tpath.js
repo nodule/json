@@ -59,7 +59,7 @@ module.exports = {
   },
   "providers": {
     "@": {
-      "url": "https://serve-chix.rhcloud.com/nodes/{ns}/{name}"
+      "url": "https://api.chix.io/v1/nodes/{ns}/{name}"
     }
   },
   "ns": "json",

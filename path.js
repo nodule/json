@@ -17,7 +17,7 @@ module.exports = {
         fn: function __IN__(data, source, state, input, $, output, jsonpath_plus) {
           var r = function() {
             output({
-              out: $.create(jsonpath_plus({
+              out: $.write('in', jsonpath_plus({
                 json: $.in,
                 path: $.path
               }))
@@ -49,5 +49,6 @@ module.exports = {
       "jsonpath-plus": require('jsonpath-plus')
     }
   },
-  state: {}
+  state: {},
+  on: {}
 }

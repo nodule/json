@@ -14,7 +14,18 @@ module.exports = {
         type: "any",
         title: "Input Object",
         async: true,
-        required: true
+        required: true,
+        fn: function __IN__(data, source, state, input, $, output) {
+          var r = function() {
+            output({
+              out: $.write('in', JSON.stringify($.in, $.replacer, $.space))
+            });
+          }.call(this);
+          return {
+            state: state,
+            return: r
+          };
+        }
       },
       replacer: {
         type: "any",
@@ -35,22 +46,6 @@ module.exports = {
       }
     }
   },
-  fn: function stringify(input, $, output, state, done, cb, on, JSON) {
-    var r = function() {
-      //output.out = JSON.stringify($. in , $.replacer, $.space);
-      on.input.in = function() {
-
-        output({
-          out: JSON.stringify($.in, $.replacer, $.space)
-        });
-
-      };
-    }.call(this);
-    return {
-      output: output,
-      state: state,
-      on: on,
-      return: r
-    };
-  }
+  state: {},
+  on: {}
 }

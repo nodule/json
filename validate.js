@@ -50,5 +50,6 @@ module.exports = {
       }
     }
   },
-  state: {}
+  state: {},
+  on: {}
 }

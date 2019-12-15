@@ -9,7 +9,7 @@
     "url": "https://github.com/nodule/json.git"
   },
   "dependencies": {
-    "defiant": "github:hbi99/defiant.js",
+    "defiant.js": "^2.2.6",
     "json-gate": "^0.8.23",
     "json-query": "^2.2.2",
     "json2xml": "^0.1.3",
